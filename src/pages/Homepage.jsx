@@ -1,104 +1,240 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import ScrollToTop from "../ScrollToTop";
 
 export default function Homepage() {
   return (
     <>
-      {/* <Header /> */}
-      <main className="bg-white text-black">
-        <section className="w-full h-[400px] md:h-[500px] bg-hero bg-cover bg-center relative">
-          <div className="w-full h-full absolute top-0 left-0 bg-slate-800/50 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
+      <Header />
+      <main className="bg-white text-[#4a044e]">
+        <section className="w-full h-[500px] md:h-[800px] bg-hero bg-cover bg-center relative z-0">
+          <div className="w-full h-full absolute top-0 left-0  bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] md:mt-0">
               <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight">
-                Trade Stocks, Forex <br /> and Crypto
+                Lonacare
+                <br />
+                Caring for Every <span className="text-[#d946ef]">Life</span>
+                <br /> Always
               </h1>
               <button
                 //   onClick={() => navigate("/register")}
-                className="w-fit bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-md text-white font-medium"
+                className="w-fit bg-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
               >
-                Get Started
+                Get In Touch
               </button>
-              {/* {!user?.accessToken ? (
-                <button
-                  onClick={() => navigate("/register")}
-                  className="w-fit bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-md text-white font-medium"
-                >
-                  Get Started
-                </button>
-              ) : (
-                <button
-                  onClick={() => navigate("/dashboard")}
-                  className="w-fit bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-md text-white font-medium"
-                >
-                  Dashboard
-                </button>
-              )} */}
+            </div>
+          </div>
+
+          <svg
+            className="w-full absolute bottom-[-1px] left-0 z-0 hidden md:block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#fdf4ff"
+              fillOpacity="1"
+              d="M0,128L60,149.3C120,171,240,213,360,218.7C480,224,600,192,720,176C840,160,960,160,1080,170.7C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+
+          {/* mobile wave */}
+          <svg
+            className="w-full absolute bottom-[-1px] left-0 z-0 block md:hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#fdf4ff"
+              fillOpacity="1"
+              d="M0,0L60,0C120,0,240,0,360,16C480,32,600,64,720,101.3C840,139,960,181,1080,181.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+        </section>
+
+        <section className="w-full min-h-[300px] px-3 pb-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99]">
+          <div className="w-full flex gap-10">
+            <div className="w-full">
+              <h1 className="font-light text-[1.5rem]">OUR MISSION</h1>
+              <div className="mt-3 text-[1.25rem]">
+                <p className="text-[1.75rem] font-bold">
+                  <span className="text-[#d946ef]">Lona care</span> is committed
+                  to make a difference by working with...
+                </p>
+                <p className="mt-3">
+                  Respect, compassion, embracing independence, choice, privacy,
+                  pride and dignity,
+                </p>
+                <p>
+                  to all our, young persons, heir families and our staff to
+                  offer specialized care and support.
+                </p>
+                <p className="mt-3">
+                  Our vision is to provide excellent quality of service which
+                  are committed to exceptional and personalized support service,
+                  while ensuring customer satisfaction
+                </p>
+                <div className="mt-4 w-full flex gap-3 font-light">
+                  <div className="h-[80px] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                    Homely Feel
+                  </div>
+                  <div className="h-[80px] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                    Experienced staff
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <img
+                alt=""
+                src="/images/mission.png"
+                className="w-full h-auto rounded-xl"
+              />
             </div>
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 py-[70px] lg:px-[350px]">
-          <h1 className="text-[1.5rem] lg:text-[2rem] text-center text-sky-900">
-            Start Making Profits in 3 Steps
-          </h1>
-          <p className="text-center tracking-wider mt-3 font-light">
-            Embark on Profitable Ventures with Ease: Achieve financial success
-            in just three straightforward steps. Our streamlined process
-            empowers you to begin generating profits swiftly and efficiently.
-            Take the first step towards a lucrative future today!
-          </p>
-          <div className="w-full flex flex-col md:flex-row gap-5 mt-7">
-            <div className="w-full h-[200px] bg-slate-100 p-3 shadow-md rounded-lg flex flex-col justify-center items-center gap-3">
-              <img
-                className="w-8 h-8"
-                alt=""
-                src="/images/icons8-register-50.png"
-              />
-              <p className="text-[1.25rem] text-sky-900">1. Register</p>
-              <p className="tracking-wider text-center font-light">
-                Open an account for free in just a few minutes
+        <section className="w-full min-h-[400px] px-3 py-[70px] lg:px-[350px] relative bg-[#fdf4ff]">
+          <h2 className="text-[2rem] font-medium text-center mb-8">
+            Why Lona Care
+          </h2>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                Semi Independent Living for
+                <br /> 16+ -25 yeas of age
               </p>
             </div>
-            <div className="w-full h-[200px] bg-slate-100 p-3 shadow-md rounded-lg flex flex-col justify-center items-center gap-3">
-              <img
-                className="w-8 h-8"
-                alt=""
-                src="/images/icons8-login-64.png"
-              />
-              <p className="text-[1.25rem] text-sky-900">2. Login</p>
-              <p className="tracking-wider text-center font-light">
-                Login to your dashboard, to manage your account
+
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                24/7 Provision for 16 - 18
+                <br /> Years of age
               </p>
             </div>
-            <div className="w-full h-[200px] bg-slate-100 p-3 shadow-md rounded-lg flex flex-col justify-center items-center gap-3">
-              <img
-                className="w-8 h-8"
-                alt=""
-                src="/images/icons8-deposit-50.png"
-              />
-              <p className="text-[1.25rem] text-sky-900">3. Deposit</p>
-              <p className="tracking-wider text-center font-light">
-                Minimum deposit of $10 for optimal trading
+
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                Stepdown provision for care leavers
+                <br /> 18 - 25 years of age
+              </p>
+            </div>
+
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                Experience staff to manage
+                <br /> the service
+              </p>
+            </div>
+
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                Work with young persons to
+                <br /> achieve outcomes
+              </p>
+            </div>
+
+            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
+              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
+                <img
+                  alt=""
+                  src="/images/mission.png"
+                  className="w-10 h-10rounded-full"
+                />
+              </div>
+              <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
+                Offer a homely feel
+                <br /> provision
               </p>
             </div>
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 py-[70px] lg:px-[350px] bg-hero2 bg-cover bg-center relative">
-          <div className="w-full h-full absolute bg-slate-950/80 top-0 left-0 flex flex-col justify-center items-center">
-            <h1 className="text-[1.5rem] lg:text-[2rem] text-center text-white">
-              Online Trading Platform
-            </h1>
-            <button
-              //   onClick={() => navigate("/dashboard")}
-              className={`px-10 py-2 mt-4 bg-transparent border-2 uppercase text-[.85rem] font-medium hover:bg-orange-500/80 hover:text-white text-white border-white rounded-md`}
-            >
-              Get Started
-            </button>
+        <section className="w-full min-h-[600px] px-3 py-[100px] lg:px-[350px] relative bg-white">
+          <div className="w-full flex gap-10 flex-row-reverse">
+            <div className="w-full">
+              <h1 className="font-light text-[1.5rem]">WHAT IS LONA CARE</h1>
+              <div className="mt-3 text-[1.25rem]">
+                <p className="text-[1.75rem] font-bold">
+                  <span className="text-[#d946ef]">Lona care</span> is committed
+                  to make a difference by working with...
+                </p>
+                <p className="mt-3">
+                  Respect, compassion, embracing independence, choice, privacy,
+                  pride and dignity,
+                </p>
+                <p>
+                  to all our, young persons, heir families and our staff to
+                  offer specialized care and support.
+                </p>
+                <p className="mt-3">
+                  Our vision is to provide excellent quality of service which
+                  are committed to exceptional and personalized support service,
+                  while ensuring customer satisfaction
+                </p>
+                <div className="mt-4 w-full flex gap-3 font-light">
+                  <button
+                    //   onClick={() => navigate("/register")}
+                    className="w-fit bg-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <img
+                alt=""
+                src="/images/hero.jpg"
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
           </div>
+        </section>
+
+        <section className="w-full min-h-[600px] bg-hero2 bg-cover bg-center relative bg-white">
+          <div className="absolute w-full h-full bg-white/50 px-3 py-[70px] lg:px-[350px]"></div>
+          {/* <h2 className="text-[2rem] font-medium text-center mb-8">
+            Why Lona Care
+          </h2> */}
         </section>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
       <ScrollToTop />
     </>
   );
