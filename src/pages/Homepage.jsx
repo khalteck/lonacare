@@ -190,30 +190,38 @@ export default function Homepage() {
               <h1 className="font-light text-[1.5rem]">WHAT IS LONA CARE</h1>
               <div className="mt-3 text-[1.25rem]">
                 <p className="text-[1.75rem] font-bold">
-                  <span className="text-[#d946ef]">Lona care</span> is committed
-                  to make a difference by working with...
+                  <span className="text-[#d946ef]">Lona care</span> is a
+                  semi-independent living services provider with excellent
+                  accomodation and support within a secure, environment...
                 </p>
                 <p className="mt-3">
-                  Respect, compassion, embracing independence, choice, privacy,
-                  pride and dignity,
+                  We believe in a supportive environment to our residents aged
+                  16 - 25 years where they can feel safe and kept safe.
                 </p>
                 <p>
-                  to all our, young persons, heir families and our staff to
-                  offer specialized care and support.
+                  We aim to be an organisation that takes great pride to support
+                  and inspire, young people so they can achieve their own
+                  personal goals, live independently and integrate within
+                  society.
                 </p>
                 <p className="mt-3">
-                  Our vision is to provide excellent quality of service which
-                  are committed to exceptional and personalized support service,
-                  while ensuring customer satisfaction
+                  We want to be the stepping stones to their independenceand
+                  adulthood.
                 </p>
-                <div className="mt-4 w-full flex gap-3 font-light">
+                <p className="mt-3">
+                  We want to ensure that we approach the young people with
+                  respect when supporting them by engaging and developing the
+                  young person mentally, emotionally, physically and
+                  spiritually.
+                </p>
+                {/* <div className="mt-4 w-full flex gap-3 font-light">
                   <button
                     //   onClick={() => navigate("/register")}
                     className="w-fit bg-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
                   >
                     Read More
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="w-full">
