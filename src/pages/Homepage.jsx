@@ -74,10 +74,10 @@ export default function Homepage() {
                   while ensuring customer satisfaction
                 </p>
                 <div className="mt-4 w-full flex gap-3 font-light">
-                  <div className="h-[80px] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
                     Homely Feel
                   </div>
-                  <div className="h-[80px] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
                     Experienced staff
                   </div>
                 </div>
@@ -234,11 +234,12 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className="w-full min-h-[600px] bg-hero2 bg-cover bg-center relative bg-white">
-          <div className="absolute w-full h-full bg-white/50 px-3 py-[70px] lg:px-[350px]"></div>
-          {/* <h2 className="text-[2rem] font-medium text-center mb-8">
-            Why Lona Care
-          </h2> */}
+        <section className="w-full min-h-[600px] bg-cover bg-center relative">
+          <div className="absolute w-full h-full bg-white px-3 py-[70px] lg:px-[350px]">
+            <h2 className="text-[2rem] font-medium text-center mb-8">
+              Our promise to you
+            </h2>
+          </div>
         </section>
       </main>
 
