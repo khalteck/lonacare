@@ -7,7 +7,7 @@ export default function Homepage() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e]">
-        <section className="w-full h-[500px] md:h-[750px] bg-hero bg-cover bg-center relative z-0">
+        <section className="w-full h-[500px] md:h-[850px] bg-hero bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] md:mt-0">
               <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight">
@@ -51,14 +51,14 @@ export default function Homepage() {
           </svg>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-x-hidden">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <h1 className="font-light text-[1.5rem]">OUR MISSION</h1>
               <div className="mt-3 text-[1.25rem]">
                 <p className="text-[1.75rem] font-bold">
                   <span className="text-[#d946ef]">Lona care</span> is committed
-                  to make a difference by working with...
+                  to make a difference...
                 </p>
                 <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
                   <img
@@ -73,8 +73,8 @@ export default function Homepage() {
                   />
                 </div>
                 <p className="mt-3">
-                  Respect, compassion, embracing independence, choice, privacy,
-                  pride and dignity,
+                  By working with respect, compassion, embracing independence,
+                  choice, privacy, pride and dignity,
                 </p>
 
                 <p>
@@ -87,10 +87,20 @@ export default function Homepage() {
                   while ensuring customer satisfaction
                 </p>
                 <div className="mt-4 w-full flex gap-3 font-light">
-                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center gap-2">
+                    <img
+                      alt=""
+                      src="/images/icons8-home-64.png"
+                      className="w-5 h-5"
+                    />
                     Homely Feel
                   </div>
-                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center">
+                  <div className="h-[40px] text-[.85rem] bg-white p-3 rounded-lg border border-purple-200 w-full flex items-center gap-2">
+                    <img
+                      alt=""
+                      src="/images/icons8-experience-30.png"
+                      className="w-5 h-5"
+                    />
                     Experienced staff
                   </div>
                 </div>
@@ -109,6 +119,17 @@ export default function Homepage() {
               />
             </div>
           </div>
+
+          <img
+            alt=""
+            src="/images/shape5.png"
+            className="w-[150px] top-5 right-5 h-auto absolute opacity-50 md:opacity-1"
+          />
+          <img
+            alt=""
+            src="/images/shape1.png"
+            className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-30 md:opacity-50"
+          />
         </section>
 
         <section className="w-full min-h-[400px] px-3 py-5 md:py-[70px] lg:px-[350px] relative bg-[#fdf4ff]">
@@ -117,12 +138,8 @@ export default function Homepage() {
           </h2>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                1
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 Semi Independent Living for
@@ -131,12 +148,8 @@ export default function Homepage() {
             </div>
 
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                2
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 24/7 Provision for 16 - 18
@@ -145,12 +158,8 @@ export default function Homepage() {
             </div>
 
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                3
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 Stepdown provision for care leavers
@@ -159,12 +168,8 @@ export default function Homepage() {
             </div>
 
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                4
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 Experience staff to manage
@@ -173,12 +178,8 @@ export default function Homepage() {
             </div>
 
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                5
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 Work with young persons to
@@ -187,12 +188,8 @@ export default function Homepage() {
             </div>
 
             <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center">
-              <div className="p-3 w-fit bg-[#d946ef]/20 rounded-full">
-                <img
-                  alt=""
-                  src="/images/mission.png"
-                  className="w-10 h-10rounded-full"
-                />
+              <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                6
               </div>
               <p className="text-[1.35rem] text-center font-medium text-[#4a044e]">
                 Offer a homely feel
@@ -200,28 +197,53 @@ export default function Homepage() {
               </p>
             </div>
           </div>
+
+          <img
+            alt=""
+            src="/images/shape4.svg"
+            className="w-[30px] top-5 md:top-10 left-10 md:right-[60%] h-auto absolute opacity-50 md:opacity-1"
+          />
+          <img
+            alt=""
+            src="/images/shape2.svg"
+            className="w-[30px] bottom-[100px] right-[150px] h-auto absolute hidden md:block"
+          />
         </section>
 
         <section className="w-full min-h-[600px] px-3 py-[100px] lg:px-[350px] relative bg-white">
           <div className="w-full flex flex-col gap-10 md:flex-row-reverse">
             <div className="w-full">
               <h1 className="font-light text-[1.5rem]">WHAT IS LONA CARE</h1>
-              <div className="w-full md:hidden block my-4">
+              {/* <div className="w-full md:hidden block my-4">
                 <img
                   alt=""
                   src="/images/hero.jpg"
                   className="w-full h-auto rounded-2xl"
                 />
+              </div> */}
+              <div className="w-full md:hidden relative flex justify-center items-center my-10">
+                <img
+                  alt=""
+                  src="/images/circle.png"
+                  className="w-full h-auto rounded-xl absolute rotate"
+                />
+                <img
+                  alt=""
+                  src="/images/hero.jpg"
+                  className="w-[280px] h-[280px] rounded-full"
+                />
               </div>
+
               <div className="mt-3 text-[1.25rem]">
                 <p className="text-[1.75rem] font-bold">
                   <span className="text-[#d946ef]">Lona care</span> is a
-                  semi-independent living services provider with excellent
-                  accomodation and support within a secure, environment...
+                  semi-independent living services provider...
                 </p>
                 <p className="mt-3">
-                  We believe in a supportive environment to our residents aged
-                  16 - 25 years where they can feel safe and kept safe.
+                  with excellent accomodation and support within a secure,
+                  environment. We believe in a supportive environment to our
+                  residents aged 16 - 25 years where they can feel safe and kept
+                  safe.
                 </p>
                 <p>
                   We aim to be an organisation that takes great pride to support
@@ -239,24 +261,47 @@ export default function Homepage() {
                   young person mentally, emotionally, physically and
                   spiritually.
                 </p>
-                {/* <div className="mt-4 w-full flex gap-3 font-light">
+                <div className="mt-4 w-full flex gap-3 font-light">
                   <button
                     //   onClick={() => navigate("/register")}
-                    className="w-fit bg-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
+                    className="w-fit bg-[#c026d3] border border-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
                   >
                     Read More
                   </button>
-                </div> */}
+                </div>
               </div>
             </div>
-            <div className="w-full hidden md:block">
+            {/* <div className="w-full hidden md:block">
               <img
                 alt=""
                 src="/images/hero.jpg"
-                className="w-full h-auto rounded-2xl"
+                className="w-[500px] h-[500px] rounded-full"
+              />
+            </div> */}
+            <div className="w-full hidden relative md:flex justify-center items-center">
+              <img
+                alt=""
+                src="/images/circle.png"
+                className="w-full h-auto rounded-xl absolute rotate"
+              />
+              <img
+                alt=""
+                src="/images/hero.jpg"
+                className="w-[500px] h-[500px] rounded-full"
               />
             </div>
           </div>
+
+          <img
+            alt=""
+            src="/images/shape1.png"
+            className="w-[200px] top-5 right-0 md:right-[150px] h-auto absolute opacity-30 md:opacity-50"
+          />
+          <img
+            alt=""
+            src="/images/shape4.svg"
+            className="w-[30px] bottom-[100px] left-[200px] h-auto absolute"
+          />
         </section>
 
         <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white">
