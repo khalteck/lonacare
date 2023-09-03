@@ -7,8 +7,8 @@ export default function Homepage() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e]">
-        <section className="w-full h-[500px] md:h-[800px] bg-hero bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0  bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
+        <section className="w-full h-[500px] md:h-[750px] bg-hero bg-cover bg-center relative z-0">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] md:mt-0">
               <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight">
                 Lonacare
@@ -60,10 +60,18 @@ export default function Homepage() {
                   <span className="text-[#d946ef]">Lona care</span> is committed
                   to make a difference by working with...
                 </p>
+                <div className="w-full block md:hidden my-5">
+                  <img
+                    alt=""
+                    src="/images/mission.png"
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
                 <p className="mt-3">
                   Respect, compassion, embracing independence, choice, privacy,
                   pride and dignity,
                 </p>
+
                 <p>
                   to all our, young persons, heir families and our staff to
                   offer specialized care and support.
@@ -83,7 +91,7 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full hidden md:block">
               <img
                 alt=""
                 src="/images/mission.png"
@@ -93,7 +101,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className="w-full min-h-[400px] px-3 py-[70px] lg:px-[350px] relative bg-[#fdf4ff]">
+        <section className="w-full min-h-[400px] px-3 py-5 md:py-[70px] lg:px-[350px] relative bg-[#fdf4ff]">
           <h2 className="text-[2rem] font-medium text-center mb-8">
             Why Lona Care
           </h2>
@@ -185,9 +193,16 @@ export default function Homepage() {
         </section>
 
         <section className="w-full min-h-[600px] px-3 py-[100px] lg:px-[350px] relative bg-white">
-          <div className="w-full flex gap-10 flex-row-reverse">
+          <div className="w-full flex flex-col gap-10 md:flex-row-reverse">
             <div className="w-full">
               <h1 className="font-light text-[1.5rem]">WHAT IS LONA CARE</h1>
+              <div className="w-full md:hidden block my-4">
+                <img
+                  alt=""
+                  src="/images/hero.jpg"
+                  className="w-full h-auto rounded-2xl"
+                />
+              </div>
               <div className="mt-3 text-[1.25rem]">
                 <p className="text-[1.75rem] font-bold">
                   <span className="text-[#d946ef]">Lona care</span> is a
@@ -224,7 +239,7 @@ export default function Homepage() {
                 </div> */}
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full hidden md:block">
               <img
                 alt=""
                 src="/images/hero.jpg"
@@ -234,11 +249,54 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className="w-full min-h-[600px] bg-cover bg-center relative">
-          <div className="absolute w-full h-full bg-white px-3 py-[70px] lg:px-[350px]">
+        <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white">
+          <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[350px]">
             <h2 className="text-[2rem] font-medium text-center mb-8">
               Our promise to you
             </h2>
+            <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div>
+                  Lonacare will ensure that you have all the information you
+                  always need and is available to you.
+                </div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div> To respect your privacy and dignity.</div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div>
+                  {" "}
+                  To understand your thoughts and support you as required.
+                </div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div> Your home is safe for you.</div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div> Address your concerns and complaints!</div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div>
+                  {" "}
+                  To keep the property well maintained and fix any repair ASAP.
+                </div>
+              </li>
+              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
+                <div className="w-4 h-4 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div>
+                  {" "}
+                  Have regular reviews and update your support plans and
+                  identify your changing needs.
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

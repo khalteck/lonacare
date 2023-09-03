@@ -40,25 +40,44 @@ const Header = () => {
     >
       <Link to="/">
         {scrollBackground ? (
-          <h1 className="text-[.95rem] md:text-[2rem] font-bold text-[#86198f]">
-            Lonacare
-          </h1>
+          <h1 className="text-[2rem] font-bold text-[#86198f]">Lonacare</h1>
         ) : (
-          <div className="flex gap-2 items-center">
-            <img
-              alt=""
-              src="/images/logo.jpg"
-              className="w-7 h-7 md:w-[120px] md:h-[100px] rounded-b-lg"
-            />
-          </div>
+          <>
+            {" "}
+            <h1 className="text-[2rem] font-bold text-[#d946ef] md:hidden">
+              Lonacare
+            </h1>
+            <div className="md:flex gap-2 items-center hidden">
+              <img
+                alt=""
+                src="/images/logo.jpg"
+                className="w-[100px] h-auto md:w-[120px] md:h-[100px] rounded-sm md:rounded-b-lg"
+              />
+            </div>
+          </>
         )}
       </Link>
-      <img
+      <div
+        onClick={handleClick}
+        className="flex flex-col gap-2 w-10 md:hidden cursor-pointer"
+      >
+        <div
+          className={`w-full h-1 ${
+            scrollBackground ? "bg-[#86198f]" : "bg-white"
+          } rounded-lg`}
+        ></div>
+        <div
+          className={`w-full h-1 ${
+            scrollBackground ? "bg-[#86198f]" : "bg-white"
+          } rounded-lg`}
+        ></div>{" "}
+      </div>
+      {/* <img
         onClick={handleClick}
         alt=""
         src="/images/icons8-menu-64.png"
         className="w-10 h-10 block md:hidden"
-      />
+      /> */}
       <ul className="gap-10 text-[1.15rem] items-center hidden md:flex">
         <li className="cursor-pointer hover:text-purple-400 transition-all duration-300">
           Home
@@ -69,24 +88,6 @@ const Header = () => {
         <li className="cursor-pointer hover:text-purple-400 transition-all duration-300">
           Contact
         </li>
-        {/* <li className="flex gap-2">
-          <button
-            //   onClick={() => navigate("/login")}
-            className="px-5 py-2 bg-orange-500 uppercase text-[.85rem] text-white font-medium hover:bg-orange-500/70 rounded-md"
-          >
-            Log In
-          </button>
-          <button
-            //   onClick={() => navigate("/register")}
-            className={`px-5 py-2 bg-transparent border-2 uppercase text-[.85rem] font-medium hover:bg-orange-500/80 hover:text-white rounded-md ${
-              scrollBackground
-                ? "text-orange-500 border-orange-500"
-                : "text-white border-white"
-            }`}
-          >
-            Sign Up
-          </button>
-        </li> */}
       </ul>
 
       {/* mobile dropdown */}
@@ -104,7 +105,7 @@ const Header = () => {
               src="/images/icons8-close-50.png"
             />
           </div>
-          <ul className="slide float-right w-full min-h-[150px] bg-orange-500 py-10 text-white gap-3 items-center md:hidden flex flex-col">
+          <ul className="slide float-right w-full min-h-[150px] bg-[#4a044e] py-10 text-white gap-3 items-center md:hidden flex flex-col">
             <li
               onClick={() => {
                 handleClick();
@@ -122,29 +123,18 @@ const Header = () => {
               }}
               className="py-2 border-b border-white/50 uppercase"
             >
-              Dashboard
+              About
             </li>
 
-            <>
-              <li
-                onClick={() => {
-                  handleClick();
-                  // navigate("/login");
-                }}
-                className="py-2 border-b border-white/50 uppercase"
-              >
-                Log In
-              </li>
-              <li
-                onClick={() => {
-                  handleClick();
-                  // navigate("/register");
-                }}
-                className="py-2 uppercase"
-              >
-                Sign Up
-              </li>
-            </>
+            <li
+              onClick={() => {
+                handleClick();
+                // navigate("/login");
+              }}
+              className="py-2 border-b border-white/50 uppercase"
+            >
+              Contact
+            </li>
           </ul>
         </div>
       )}
