@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useNavigate } from "react-router-dom";
+
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="w-full bg-[#f8fafc] pt-[50px] text-[.95rem] text-slate-500">
       <div className="w-full mb-[60px] px-4 sm:px-[30px] lg:px-[80px] flex flex-col md:flex-row gap-8 justify-center">
@@ -21,7 +24,7 @@ const Footer = () => {
 
         <ul className="w-full md:w-[250px] flex-col gap-3 md:hidden flex">
           <li className="w-[fit-content] font-bold">Address</li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li className="w-[fit-content]">
             Lona care
             <br />
             15 Maswell Park Road,
@@ -37,13 +40,22 @@ const Footer = () => {
 
         <ul className="w-full md:w-[200px] flex flex-col gap-3">
           <li className="w-[fit-content] font-bold">Browse</li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li
+            onClick={() => navigate("/")}
+            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+          >
             Home
           </li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li
+            onClick={() => navigate("/about")}
+            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+          >
             About
           </li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li
+            onClick={() => navigate("/contact")}
+            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+          >
             Contact
           </li>
         </ul>
@@ -51,15 +63,18 @@ const Footer = () => {
         <ul className="w-full md:w-[250px] flex flex-col gap-3">
           <li className="w-[fit-content] font-bold">Contact Information</li>
           <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
-            Tel: 02080904509
+            <a href="tel:02080904509">Tel: 02080904509</a>
           </li>
           <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
-            Mob: 07956537535
+            <a href="tel:07956537535">Mob: 07956537535</a>
           </li>
           <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
-            Email: info@lonacare.com
+            <a href="mailto:info@lonacare.com">Email: info@lonacare.com</a>
           </li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li
+            onClick={() => navigate("/")}
+            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+          >
             lonacare.com
           </li>
         </ul>

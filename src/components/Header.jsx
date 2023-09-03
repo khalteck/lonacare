@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { useAppContext } from "../contexts/AppContext";
-// import { useAppContext } from "../contexts/AppContext";
+import { useAppContext } from "../contexts/AppContext";
 
 const Header = () => {
-  //   const { currentPage } = useAppContext();
+  const { currentPage } = useAppContext();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollBackground, setScrollBackground] = useState(false);
@@ -35,8 +34,10 @@ const Header = () => {
       className={`w-full h-[60px] ${
         scrollBackground
           ? "bg-[#fdf4ff] text-black shadow-md md:h-[80px]"
-          : "bg-transparent text-white md:h-[100px]"
-      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[350px] items-center transition-all duration-700 fixed top-0 left-0 z-10`}
+          : !scrollBackground && currentPage === "/"
+          ? "bg-transparent text-white md:h-[100px]"
+          : "bg-[#fdf4ff] text-black md:h-[80px]"
+      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[350px] items-center transition-all duration-700 fixed top-0 left-0 z-[999]`}
     >
       <Link to="/">
         {scrollBackground ? (
@@ -65,12 +66,20 @@ const Header = () => {
       >
         <div
           className={`w-full h-1 ${
-            scrollBackground ? "bg-[#86198f]" : "bg-white"
+            scrollBackground
+              ? "bg-[#86198f]"
+              : !scrollBackground && currentPage === "/"
+              ? "bg-white"
+              : "bg-[#86198f]"
           } rounded-lg`}
         ></div>
         <div
           className={`w-full h-1 ${
-            scrollBackground ? "bg-[#86198f]" : "bg-white"
+            scrollBackground
+              ? "bg-[#86198f]"
+              : !scrollBackground && currentPage === "/"
+              ? "bg-white"
+              : "bg-[#86198f]"
           } rounded-lg`}
         ></div>{" "}
       </div>
@@ -81,13 +90,22 @@ const Header = () => {
         className="w-10 h-10 block md:hidden"
       /> */}
       <ul className="gap-10 text-[1.15rem] items-center hidden md:flex">
-        <li className="cursor-pointer hover:text-purple-400 transition-all duration-300">
+        <li
+          onClick={() => navigate("/")}
+          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+        >
           Home
         </li>
-        <li className="cursor-pointer hover:text-purple-400 transition-all duration-300">
+        <li
+          onClick={() => navigate("/about")}
+          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+        >
           About
         </li>
-        <li className="cursor-pointer hover:text-purple-400 transition-all duration-300">
+        <li
+          onClick={() => navigate("/contact")}
+          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+        >
           Contact
         </li>
       </ul>
@@ -121,7 +139,7 @@ const Header = () => {
             <li
               onClick={() => {
                 handleClick();
-                // navigate("/dashboard");
+                navigate("/about");
               }}
               className="py-2 border-b border-white/50 uppercase"
             >
@@ -131,7 +149,7 @@ const Header = () => {
             <li
               onClick={() => {
                 handleClick();
-                // navigate("/login");
+                navigate("/contact");
               }}
               className="py-2 border-b border-white/50 uppercase"
             >

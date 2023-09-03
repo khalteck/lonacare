@@ -5,8 +5,8 @@ import Loader from "./components/Loader";
 // import { useAppContext } from "./contexts/AppContext";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
-// const Register = lazy(() => import("./pages/Register"));
-// const Login = lazy(() => import("./pages/Login"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
 // const Dashboard = lazy(() => import("./pages/Dashboard"));
 // const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 
@@ -16,8 +16,8 @@ function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        {/* <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} /> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* {userDetails?.email ? (
           <>
