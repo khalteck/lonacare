@@ -2,3 +2,32 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 /* Your custom styles can go here */
+
+@layer utilities {
+  .slide {
+    animation: slide 0.8s ease-out;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .rotate {
+    animation: rotate 15s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

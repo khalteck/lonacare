@@ -51,7 +51,7 @@ export default function Homepage() {
           </svg>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99]">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-x-hidden">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <h1 className="font-light text-[1.5rem]">OUR MISSION</h1>
@@ -60,11 +60,16 @@ export default function Homepage() {
                   <span className="text-[#d946ef]">Lona care</span> is committed
                   to make a difference by working with...
                 </p>
-                <div className="w-full block md:hidden my-5">
+                <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
+                  <img
+                    alt=""
+                    src="/images/about.png"
+                    className="w-full h-auto absolute rotate rounded-full"
+                  />
                   <img
                     alt=""
                     src="/images/mission.png"
-                    className="w-full h-auto rounded-xl"
+                    className="w-[90%] h-auto rounded-xl"
                   />
                 </div>
                 <p className="mt-3">
@@ -91,11 +96,16 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="w-full hidden md:block">
+            <div className="w-full hidden relative md:flex justify-center items-center">
+              <img
+                alt=""
+                src="/images/about.png"
+                className="w-full h-auto rounded-xl absolute rotate"
+              />
               <img
                 alt=""
                 src="/images/mission.png"
-                className="w-full h-auto rounded-xl"
+                className="w-[80%] h-auto rounded-xl"
               />
             </div>
           </div>
