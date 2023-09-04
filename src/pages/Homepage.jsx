@@ -198,7 +198,7 @@ export default function Homepage() {
               </div>
               <p className="text-[1.15rem] text-center font-medium">
                 Semi Independent Living for
-                <br /> 16+ -25 yeas of age
+                <br /> 16 - 25 yeas of age
               </p>
             </div>
 

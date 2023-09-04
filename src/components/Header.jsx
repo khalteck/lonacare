@@ -48,9 +48,7 @@ const Header = () => {
           <>
             {" "}
             <h1
-              className={`text-[1.5rem] font-merri md:text-[2rem] font-[900] md:hidden uppercase ${
-                currentPage === "/" ? "text-[#d946ef]" : "text-[#86198f]"
-              }`}
+              className={`text-[1.5rem] font-merri md:text-[2rem] font-[900] text-white md:hidden uppercase`}
             >
               Lonacare
             </h1>
