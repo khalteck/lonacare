@@ -9,12 +9,13 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
+    fontFamily: {
+      merri: ["Merriweather", "sans-serif"],
+    },
     extend: {
       backgroundImage: {
         hero: "url('/images/hero.jpg')",
         hero2: "url('/images/hero2.jpg')",
-        // register: "url('/images/hero2.jpg')",
-        // dash: "url('/images/dashboard.jpg')",
       },
     },
   },

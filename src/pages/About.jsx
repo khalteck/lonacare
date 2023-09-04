@@ -15,29 +15,14 @@ export default function About() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e] mt-[60px] md:mt-[80px]">
-        <h1 className="text-[2rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff]">
+        <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
           About Lonacare
         </h1>
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
-              {/* <h1
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="font-light text-[1.5rem]"
-              >
-                OUR MISSION
-              </h1> */}
               <div className="mt-3 text-[1.25rem]">
-                {/* <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className="text-[1.75rem] font-bold"
-                >
-                 
-                </p> */}
                 <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
                   <img
                     alt=""
@@ -281,7 +266,8 @@ export default function About() {
             </h2>
             <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 p-2 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+
                 <div>
                   Young people at lona care are supported by specialized key
                   workers, who offer great encouragement, learning and
@@ -290,7 +276,8 @@ export default function About() {
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 p-2 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+
                 <div>
                   Lona care wants to offer the YP'sa level of confidence that
                   will boost their morale and be ready for the level of choice
@@ -299,7 +286,8 @@ export default function About() {
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 p-2 mr-3 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+
                 <div>
                   We believe that if we can achieve the goals set our YP's will
                   transitioning into adulthood with the skills, encouragement,

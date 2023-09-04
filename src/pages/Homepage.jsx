@@ -17,7 +17,7 @@ export default function Homepage() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e]">
-        <section className="w-full h-[500px] md:h-[850px] bg-hero bg-cover bg-center relative z-0">
+        <section className="w-full h-[500px] md:h-[800px] bg-hero bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
               <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight">
@@ -27,7 +27,7 @@ export default function Homepage() {
                 <br /> Always
               </h1>
               <button
-                //   onClick={() => navigate("/register")}
+                onClick={() => navigate("/contact")}
                 className="w-fit bg-[#c026d3] hover:bg-white hover:text-[#c026d3] px-8 py-3 rounded-md text-white font-medium transition-all duration-300"
               >
                 Get In Touch
@@ -149,7 +149,7 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="w-full hidden relative md:flex justify-center items-center">
+            <div className="w-full hidden relative md:flex justify-center items-center overflow-hidden">
               <img
                 alt=""
                 src="/images/about.png"
@@ -182,17 +182,17 @@ export default function Homepage() {
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-[2rem] font-medium text-center mb-8"
+            className="text-[1.5rem] uppercase font-bold text-center mb-8 font-merri"
           >
             Why Lona Care
           </h2>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
-          >
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 1
               </div>
@@ -202,7 +202,12 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 2
               </div>
@@ -212,7 +217,12 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 3
               </div>
@@ -222,7 +232,12 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 4
               </div>
@@ -232,7 +247,12 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 5
               </div>
@@ -242,7 +262,12 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full h-[200px] bg-white/80 rounded-xl p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+            >
               <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
                 6
               </div>
@@ -407,40 +432,40 @@ export default function Homepage() {
             </h2>
             <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div>
                   Lonacare will ensure that you have all the information you
                   always need and is available to you.
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div> To respect your privacy and dignity.</div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div>
                   {" "}
                   To understand your thoughts and support you as required.
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div> Your home is safe for you.</div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div> Address your concerns and complaints!</div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div>
                   {" "}
                   To keep the property well maintained and fix any repair ASAP.
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-4 h-4 mr-3 p-2 bg-white rounded-full mt-1 hidden md:block"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div>
                   {" "}
                   Have regular reviews and update your support plans and

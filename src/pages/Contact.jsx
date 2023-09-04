@@ -23,16 +23,16 @@ export default function Contact() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e] mt-[60px] md:mt-[80px]">
-        <h1 className="text-[2rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff]">
+        <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
           About Lonacare
         </h1>
         <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[80px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
-          <div className="w-full mt-4 flex md:flex-row flex-col flex-wrap gap-3 text-[#4a044e] ">
+          <div className="w-full mt-4 flex md:flex-row flex-col flex-wrap gap-3 text-[#4a044e] z-30">
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
             >
               <img
                 alt=""
@@ -48,7 +48,7 @@ export default function Contact() {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
             >
               <img
                 alt=""
@@ -70,7 +70,7 @@ export default function Contact() {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
             >
               <img
                 alt=""
@@ -90,12 +90,12 @@ export default function Contact() {
           <img
             alt=""
             src="/images/shape5.png"
-            className="w-[150px] top-5 right-5 h-auto absolute opacity-50 md:opacity-1"
+            className="w-[150px] top-5 right-5 h-auto absolute opacity-1 md:opacity-1 z-10"
           />
           <img
             alt=""
             src="/images/shape1.png"
-            className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-30 md:opacity-50"
+            className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-1 md:opacity-50 z-10"
           />
         </section>
       </main>
