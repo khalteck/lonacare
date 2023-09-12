@@ -1,0 +1,56 @@
+[
+  {
+    "image": "/images/service6.jpeg",
+    "title": "House 1",
+    "location": "123 example street",
+    "tags": ["Young people", "Supported housing"],
+    "description": "",
+    "features": [
+      "Staff on-site 24 hours a day",
+      "Short-term supported housing with personal care",
+      "Integrated and mobile assistive technology"
+    ],
+    "pictures": [
+      "/images/service6.jpeg",
+      "/images/service1.jpeg",
+      "/images/service2.jpeg",
+      "/images/service3.jpeg"
+    ]
+  },
+  {
+    "image": "/images/service7.jpeg",
+    "title": "House 2",
+    "location": "123 humpty street",
+    "tags": ["Young people", "Supported housing"],
+    "description": "",
+    "features": [
+      "Staff on-site 24 hours a day",
+      "Short-term supported housing with personal care",
+      "Integrated and mobile assistive technology"
+    ],
+    "pictures": [
+      "/images/service7.jpeg",
+      "/images/service1.jpeg",
+      "/images/service2.jpeg",
+      "/images/service3.jpeg"
+    ]
+  },
+  {
+    "image": "/images/house.jpg",
+    "title": "House 3",
+    "location": "123 crackle street",
+    "tags": ["Young people", "Supported housing"],
+    "description": "",
+    "features": [
+      "Staff on-site 24 hours a day",
+      "Short-term supported housing with personal care",
+      "Integrated and mobile assistive technology"
+    ],
+    "pictures": [
+      "/images/house.jpg",
+      "/images/service1.jpeg",
+      "/images/service2.jpeg",
+      "/images/service3.jpeg"
+    ]
+  }
+]

@@ -23,7 +23,7 @@ export default function Homepage() {
               <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight">
                 Lona Care <br /> Making a Difference <br /> in Young Lives.
               </h1>
-              <div className="flex gap-3">
+              <div className="flex gap-3 mt-4 md:mt-0">
                 <button
                   onClick={() => navigate("/service")}
                   className="w-fit bg-[#d946ef] hover:bg-white hover:text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
@@ -69,7 +69,7 @@ export default function Homepage() {
                     data-aos-delay="200"
                     alt=""
                     src="/images/service7.jpeg"
-                    className="w-[90%] h-[300px] object-cover rounded-sm"
+                    className="w-[90%] h-[230px] object-cover object-top rounded-sm"
                   />
                 </div>
                 {/* <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
