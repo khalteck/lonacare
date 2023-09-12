@@ -7,8 +7,7 @@ import Loader from "./components/Loader";
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-// const Dashboard = lazy(() => import("./pages/Dashboard"));
-// const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
+const Service = lazy(() => import("./pages/Service"));
 
 function App() {
   // const { userDetails } = useAppContext();
@@ -17,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* {userDetails?.email ? (

@@ -22,10 +22,17 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#4a044e] mt-[60px] md:mt-[80px]">
-        <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
-          About Lonacare
-        </h1>
+      <main className="bg-white text-[#4a044e]">
+        <section className="w-full h-[300px] md:h-[400px] bg-contact bg-cover bg-center relative z-0">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
+            <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
+              <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]">
+                Contact Us
+              </h1>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[80px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full mt-4 flex md:flex-row flex-col flex-wrap gap-3 text-[#4a044e] z-30">
             <div
@@ -87,7 +94,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <img
+          {/* <img
             alt=""
             src="/images/shape5.png"
             className="w-[150px] top-5 right-5 h-auto absolute opacity-1 md:opacity-1 z-10"
@@ -96,7 +103,7 @@ export default function Contact() {
             alt=""
             src="/images/shape1.png"
             className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-1 md:opacity-50 z-10"
-          />
+          /> */}
         </section>
       </main>
 

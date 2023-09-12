@@ -33,10 +33,10 @@ const Header = () => {
     <header
       className={`w-full h-[60px] ${
         scrollBackground
-          ? "bg-[#fdf4ff] text-black shadow-md md:h-[80px]"
-          : !scrollBackground && currentPage === "/"
+          ? "bg-white text-black shadow-md md:h-[80px]"
+          : !scrollBackground
           ? "bg-transparent text-white md:h-[100px]"
-          : "bg-[#fdf4ff] text-black md:h-[80px]"
+          : "bg-white text-black md:h-[80px]"
       } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[350px] items-center transition-all duration-700 fixed top-0 left-0 z-[999]`}
     >
       <Link to="/">
@@ -70,7 +70,7 @@ const Header = () => {
           className={`w-full h-1 ${
             scrollBackground
               ? "bg-[#86198f]"
-              : !scrollBackground && currentPage === "/"
+              : !scrollBackground
               ? "bg-white"
               : "bg-[#86198f]"
           } rounded-lg`}
@@ -79,34 +79,46 @@ const Header = () => {
           className={`w-full h-1 ${
             scrollBackground
               ? "bg-[#86198f]"
-              : !scrollBackground && currentPage === "/"
+              : !scrollBackground
               ? "bg-white"
               : "bg-[#86198f]"
           } rounded-lg`}
         ></div>{" "}
       </div>
-      {/* <img
-        onClick={handleClick}
-        alt=""
-        src="/images/icons8-menu-64.png"
-        className="w-10 h-10 block md:hidden"
-      /> */}
       <ul className="gap-10 text-[1.15rem] items-center hidden md:flex">
         <li
           onClick={() => navigate("/")}
-          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+            currentPage === "/" ? "border-[#d946ef]" : "border-transparent"
+          }`}
         >
           Home
         </li>
         <li
           onClick={() => navigate("/about")}
-          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+            currentPage === "/about" ? "border-[#d946ef]" : "border-transparent"
+          }`}
         >
           About
         </li>
         <li
+          onClick={() => navigate("/service")}
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+            currentPage === "/service"
+              ? "border-[#d946ef]"
+              : "border-transparent"
+          }`}
+        >
+          Find service
+        </li>
+        <li
           onClick={() => navigate("/contact")}
-          className="cursor-pointer hover:text-purple-400 transition-all duration-300"
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+            currentPage === "/contact"
+              ? "border-[#d946ef]"
+              : "border-transparent"
+          }`}
         >
           Contact
         </li>
@@ -133,7 +145,7 @@ const Header = () => {
                 handleClick();
                 navigate("/");
               }}
-              className="py-2 border-b border-white/50 uppercase"
+              className="py-2 uppercase"
             >
               Home
             </li>
@@ -143,7 +155,7 @@ const Header = () => {
                 handleClick();
                 navigate("/about");
               }}
-              className="py-2 border-b border-white/50 uppercase"
+              className="py-2 uppercase"
             >
               About
             </li>
@@ -151,9 +163,19 @@ const Header = () => {
             <li
               onClick={() => {
                 handleClick();
+                navigate("/service");
+              }}
+              className="py-2 uppercase"
+            >
+              Find service
+            </li>
+
+            <li
+              onClick={() => {
+                handleClick();
                 navigate("/contact");
               }}
-              className="py-2 border-b border-white/50 uppercase"
+              className="py-2 uppercase"
             >
               Contact
             </li>

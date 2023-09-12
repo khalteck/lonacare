@@ -14,28 +14,33 @@ export default function About() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#4a044e] mt-[60px] md:mt-[80px]">
-        <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
+      <main className="bg-white text-[#4a044e]">
+        <section className="w-full h-[300px] md:h-[400px] bg-about bg-cover bg-center relative z-0">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
+            <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
+              <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]">
+                About Lonacare
+              </h1>
+            </div>
+          </div>
+        </section>
+        {/* <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
           About Lonacare
-        </h1>
+        </h1> */}
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <div className="mt-3 text-[1.25rem]">
-                <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
-                  <img
-                    alt=""
-                    src="/images/about.png"
-                    className="w-full h-auto absolute rotate rounded-full"
-                  />
+                <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[10px]">
+                  <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                     alt=""
-                    src="/images/mission.png"
-                    className="w-[90%] h-auto rounded-xl"
+                    src="/images/hero4.jpg"
+                    className="w-[90%] h-auto rounded-sm"
                   />
                 </div>
                 <p
@@ -74,24 +79,20 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="w-full hidden relative md:flex justify-center items-center">
-              <img
-                alt=""
-                src="/images/about.png"
-                className="w-full h-auto rounded-xl absolute rotate"
-              />
+            <div className="w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
+              <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
               <img
                 data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/mission.png"
-                className="w-[80%] h-auto rounded-xl"
+                src="/images/hero4.jpg"
+                className="w-[90%] h-auto rounded-sm"
               />
             </div>
           </div>
 
-          <img
+          {/* <img
             alt=""
             src="/images/shape5.png"
             className="w-[150px] top-5 right-5 h-auto absolute opacity-50 md:opacity-1"
@@ -100,7 +101,7 @@ export default function About() {
             alt=""
             src="/images/shape1.png"
             className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-30 md:opacity-50"
-          />
+          /> */}
         </section>
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
@@ -182,7 +183,7 @@ export default function About() {
             </div> */}
           </div>
 
-          <img
+          {/* <img
             alt=""
             src="/images/shape2.svg"
             className="w-[30px] bottom-[100px] right-[100px] h-auto absolute opacity-50 md:opacity-1"
@@ -191,7 +192,7 @@ export default function About() {
             alt=""
             src="/images/shape4.svg"
             className="w-[40px] top-7 md:bottom-5 left-[250px] h-auto absolute opacity-30 md:opacity-50"
-          />
+          /> */}
 
           <div className="w-full mt-10">
             {/* <p
