@@ -4,7 +4,7 @@
     "title": "House 1",
     "location": "123 example street",
     "tags": ["Young people", "Supported housing"],
-    "description": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     "features": [
       "Staff on-site 24 hours a day",
       "Short-term supported housing with personal care",
@@ -22,7 +22,7 @@
     "title": "House 2",
     "location": "123 humpty street",
     "tags": ["Young people", "Supported housing"],
-    "description": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     "features": [
       "Staff on-site 24 hours a day",
       "Short-term supported housing with personal care",
@@ -40,7 +40,7 @@
     "title": "House 3",
     "location": "123 crackle street",
     "tags": ["Young people", "Supported housing"],
-    "description": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     "features": [
       "Staff on-site 24 hours a day",
       "Short-term supported housing with personal care",

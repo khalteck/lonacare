@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ScrollToTop from "../ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import houses from "../data/houses.json";
 import { useParams } from "react-router-dom";
 
@@ -16,6 +17,31 @@ export default function ServiceDetails() {
   const { title } = useParams();
 
   const currentService = houses?.filter((item) => item?.title === title)[0];
+
+  const [index, setIndex] = useState(0);
+  const [image, setImage] = useState(currentService?.pictures[index]);
+
+  useEffect(() => {
+    setImage(currentService?.pictures[index]);
+  }, [index]);
+
+  function next() {
+    const lastIndex = currentService?.pictures?.length - 1;
+    if (image === currentService?.pictures[lastIndex]) {
+      setIndex(0);
+    } else {
+      setIndex((prev) => prev + 1);
+    }
+  }
+
+  function prev() {
+    const lastIndex = currentService?.pictures?.length - 1;
+    if (image === currentService?.pictures[0]) {
+      setIndex(lastIndex);
+    } else {
+      setIndex((prev) => prev - 1);
+    }
+  }
 
   return (
     <>
@@ -65,9 +91,193 @@ export default function ServiceDetails() {
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-10 md:pb-[80px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
-          <h2 className="font-medium my-3 text-[1.5rem]">About</h2>
-          <p>{currentService?.description}</p>
+        <section className="w-full min-h-[300px] px-3 pt-10 lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
+          >
+            About
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="w-full md:w-[70%]"
+          >
+            {currentService?.description}
+          </p>
+          <ul
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="flex flex-col gap-3 mt-4"
+          >
+            {currentService?.features?.map((itm, idx) => {
+              return (
+                <li key={idx} className="flex gap-2 items-center">
+                  <div className="w-2 h-2 p-1 bg-[#86198f] rounded-full mt-1"></div>{" "}
+                  {itm}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+
+        <section className="w-full min-h-[300px] px-3 py-12 lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
+          >
+            Accommodation
+          </h2>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="flex gap-4 flex-col md:flex-row flex-wrap"
+          >
+            <div className="min-h-[100px] w-full sm:w-[300px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 flex items-start gap-2">
+              <img
+                alt=""
+                src="/images/icons8-home-64.png"
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="font-medium leading-tight text-[1.15rem]">
+                  Location
+                </p>
+                <p>{currentService?.location}</p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="min-h-[100px] w-full sm:w-[300px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 flex items-start gap-2"
+            >
+              <img
+                alt=""
+                src="/images/icons8-home-64.png"
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="font-medium leading-tight text-[1.15rem]">
+                  Accommodation Type
+                </p>
+                <p>
+                  Seven unfurnished en-suite bedrooms in a shared house, spread
+                  across four floors.
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="min-h-[100px] w-full sm:w-[300px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 flex items-start gap-2"
+            >
+              <img
+                alt=""
+                src="/images/icons8-home-64.png"
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="font-medium leading-tight text-[1.15rem]">
+                  Rental Agreement
+                </p>
+                <p>
+                  All bedrooms are let on an assured shorthold tenancy
+                  agreement.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="mt-4"
+          >
+            <div className="relative w-full md:w-fit">
+              <img
+                alt=""
+                src={image}
+                className="w-full md:w-[550px] h-[300px] md:h-[400px] object-cover rounded-sm"
+              />
+              <div className="absolute top-[50%] translate-y-[-50%] left-0 w-full flex justify-between">
+                <div
+                  onClick={prev}
+                  className="w-fit h-fit p-2  bg-white rounded-full cursor-pointer"
+                >
+                  <img
+                    className="w-5 h-5  text-white"
+                    alt=""
+                    src="/images/icons8-close-50.png"
+                  />
+                </div>
+                <div
+                  onClick={next}
+                  className="w-fit h-fit p-2  bg-white rounded-full cursor-pointer"
+                >
+                  <img
+                    className="w-5 h-5  text-white"
+                    alt=""
+                    src="/images/icons8-close-50.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-4 mt-4 flex-wrap">
+              {currentService?.pictures?.map((itm, idx) => {
+                return (
+                  <img
+                    key={idx}
+                    alt=""
+                    src={itm}
+                    onClick={() => setImage(itm)}
+                    className={`w-[80px] h-[80px] object-cover border-4 cursor-pointer hover:opacity-50 rounded-sm ${
+                      itm === image
+                        ? "border-[#d946ef]"
+                        : "border-[#86198f]/70 opacity-80"
+                    }`}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full min-h-[300px] px-3 pt-10 pb-[100px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
+          >
+            Apply Now
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="w-full md:w-[70%] font-medium"
+          >
+            How do I apply?
+            <br />
+            To apply, please complete the enquiry form below and ask for an
+            application form.
+          </p>
+
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="w-full md:w-[70%] min-h-[600px] bg-gray-200 rounded-sm border border-purple-200 mt-5 p-4 md:p-5"
+          ></div>
         </section>
       </main>
 

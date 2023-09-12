@@ -19,6 +19,7 @@ const HouseCard = ({ item }) => {
         <img
           alt=""
           src={item?.image}
+          onClick={() => navigate(`/service/${item?.title}`)}
           className="w-full h-[230px] md:h-[280px] object-cover rounded-sm hover:opacity-[0.8] cursor-pointer transition-all duration-300"
         />
         <div className="h-[40px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 w-fit flex items-center gap-2 absolute bottom-4 left-4">
