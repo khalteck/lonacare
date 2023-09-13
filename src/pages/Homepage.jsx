@@ -5,6 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../contexts/AppContext";
+import SearchCont from "../components/SearchCont";
 
 export default function Homepage() {
   useEffect(() => {
@@ -12,10 +14,13 @@ export default function Homepage() {
   }, []);
 
   const navigate = useNavigate();
+  const { setSearchOpen, searchOpen } = useAppContext();
 
   return (
     <>
       <Header />
+
+      {searchOpen && <SearchCont />}
       <main className="bg-white text-[#4a044e]">
         <section className="w-full h-[500px] md:h-[500px] bg-hero bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
@@ -28,7 +33,7 @@ export default function Homepage() {
                   onClick={() => navigate("/service")}
                   className="w-fit bg-[#d946ef] hover:bg-white hover:text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
                 >
-                  Find a Service
+                  Book a Service
                 </button>
                 <button
                   onClick={() => navigate("/contact")}
@@ -37,11 +42,17 @@ export default function Homepage() {
                   Get In Touch
                 </button>
               </div>
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="w-fit hover:bg-[#d946ef] md:hidden bg-white text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
+              >
+                Search
+              </button>
             </div>
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[350px] bg-white z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[350px] bg-white overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <h1
@@ -293,7 +304,7 @@ export default function Homepage() {
         </section>
 
         <section className="w-full min-h-[600px] px-3 py-[100px] lg:px-[350px] relative bg-white">
-          <div className="w-full flex flex-col gap-10 md:flex-row-reverse">
+          <div className="w-full flex flex-col gap-10 lg:flex-row-reverse">
             <div className="w-full">
               <h1
                 data-aos="fade-up"
@@ -380,9 +391,15 @@ export default function Homepage() {
                 >
                   <button
                     onClick={() => navigate("/about")}
-                    className="w-fit bg-[#86198f] border border-[#86198f] hover:bg-white hover:text-[#86198f] px-8 py-2 rounded-sm text-white font-medium transition-all duration-300"
+                    className="w-fit bg-[#86198f] border border-[#86198f] hover:bg-white text-[.95rem] hover:text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
                   >
                     Read More
+                  </button>
+                  <button
+                    onClick={() => navigate("/service")}
+                    className="w-fit hover:bg-[#86198f] border border-[#86198f] bg-white text-[.95rem] text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
+                  >
+                    Book a Service
                   </button>
                 </div>
               </div>

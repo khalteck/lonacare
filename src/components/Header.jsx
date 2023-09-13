@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 
 const Header = () => {
-  const { currentPage } = useAppContext();
+  const { currentPage, setSearchOpen } = useAppContext();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollBackground, setScrollBackground] = useState(false);
@@ -85,7 +85,7 @@ const Header = () => {
           } rounded-lg`}
         ></div>{" "}
       </div>
-      <ul className="gap-10 text-[1.15rem] items-center hidden md:flex">
+      <ul className="gap-6 text-[.9remrem] items-center hidden md:flex">
         <li
           onClick={() => navigate("/")}
           className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
@@ -104,13 +104,13 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/service")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 whitespace-nowrap lg:pb-3 border-b-4 ${
             currentPage === "/service"
               ? "border-[#d946ef]"
               : "border-transparent"
           }`}
         >
-          Find service
+          Book service
         </li>
         <li
           onClick={() => navigate("/contact")}
@@ -121,6 +121,23 @@ const Header = () => {
           }`}
         >
           Contact
+        </li>
+        <li
+          onClick={() => setSearchOpen(true)}
+          className={`cursor-pointer hover:bg-[#d946ef] translate-y-[-5px] transition-all duration-300 pb-1.5 whitespace-nowrap md:py-1.5 md:px-2 rounded-sm border-b-4 flex items-center gap-1 bg-[#86198f] text-white ${
+            currentPage === "/earch" ? "border-[#d946ef]" : "border-transparent"
+          }`}
+        >
+          Search
+          <img
+            className="w-6 h-6  text-white"
+            alt=""
+            src={`${
+              scrollBackground
+                ? "/images/icons8-search-50.png"
+                : "/images/icons8-search-50-white.png"
+            }`}
+          />
         </li>
       </ul>
 
@@ -167,7 +184,7 @@ const Header = () => {
               }}
               className="py-2 uppercase"
             >
-              Find service
+              Book service
             </li>
 
             <li

@@ -9,13 +9,14 @@ const AppContextProvider = ({ children }) => {
   const location = useLocation();
   let currentPage = location.pathname;
 
-  const [loader, setLoader] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <AppContext.Provider
       value={{
         currentPage,
-        loader,
+        searchOpen,
+        setSearchOpen,
       }}
     >
       {children}
