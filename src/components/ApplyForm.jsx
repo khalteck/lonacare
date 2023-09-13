@@ -153,7 +153,7 @@ const ApplyForm = () => {
       </div>
       <div className="w-full flex justify-end">
         <button
-          //   onClick={() => navigate(`/service/${item?.title}`)}
+          disabled={loading}
           className="w-fit bg-[#86198f] border border-[#86198f] mt-4 hover:bg-white hover:text-[#86198f] px-8 py-2 rounded-sm text-white font-medium transition-all duration-300"
         >
           {loading ? "Submitting..." : "Submit"}
