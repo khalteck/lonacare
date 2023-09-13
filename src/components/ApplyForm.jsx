@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 
-const ApplyForm = () => {
+const ApplyForm = ({ currentService }) => {
   const formRef = useRef(null);
 
   const scriptUrl =
@@ -147,6 +148,22 @@ const ApplyForm = () => {
           className="bg-gray-50 h-[200px] border border-gray-300 text-gray-900 text-[.75em] sm:text-sm rounded-sm focus:ring-[#86198f] focus:border-[#86198f] block w-full p-3 dark:border-[#86198f] dark:placeholder-gray-400 dark:focus:ring-[#86198f] dark:focus:border-[#86198f]"
           placeholder="Enquiry"
           required
+          // value={regForm.last_name || ""}
+          // onChange={handleRegChange}
+        />
+      </div>
+      <div className="absolute bottom-1 left-0 opacity-0">
+        {/* <label htmlFor="house" className="block mb-2 text-sm font-medium">
+            Post code
+          </label> */}
+        <input
+          type="text"
+          name="house"
+          id="house"
+          className="bg-gray-50 w-[40px] border border-gray-300 text-gray-900 text-[.75em] sm:text-sm rounded-sm focus:ring-[#86198f] focus:border-[#86198f] block p-3 dark:border-[#86198f] dark:placeholder-gray-400 dark:focus:ring-[#86198f] dark:focus:border-[#86198f]"
+          value={`${currentService?.title}`}
+          required
+          readOnly
           // value={regForm.last_name || ""}
           // onChange={handleRegChange}
         />

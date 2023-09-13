@@ -289,7 +289,7 @@ export default function ServiceDetails() {
             application form.
           </p>
 
-          <ApplyForm />
+          <ApplyForm currentService={currentService} />
         </section>
       </main>
 
