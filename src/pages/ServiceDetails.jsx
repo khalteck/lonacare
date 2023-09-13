@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import houses from "../data/houses.json";
 import { useParams } from "react-router-dom";
+import ApplyForm from "../components/ApplyForm";
 
 export default function ServiceDetails() {
   useEffect(() => {
@@ -56,6 +57,19 @@ export default function ServiceDetails() {
               <p className="text-white text-[1.2rem]">
                 Location: {currentService?.location}
               </p>
+              <button
+                onClick={() => {
+                  const element = document.getElementById("apply");
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "end",
+                    inline: "nearest",
+                  });
+                }}
+                className="w-fit bg-[#86198f] border border-[#86198f] mt-4 hover:bg-white hover:text-[#86198f] px-8 py-2 rounded-sm text-white font-medium transition-all duration-300"
+              >
+                Apply
+              </button>
             </div>
             <div className="w-full md:w-1/2 h-[250px] md:h-full relative">
               <div className="absolute w-full h-full bg-gradient-to-bl from-purple-950/40 to-purple-950/10 "></div>
@@ -217,7 +231,7 @@ export default function ServiceDetails() {
                   <img
                     className="w-5 h-5  text-white"
                     alt=""
-                    src="/images/icons8-close-50.png"
+                    src="/images/icons8-previous-50.png"
                   />
                 </div>
                 <div
@@ -227,7 +241,7 @@ export default function ServiceDetails() {
                   <img
                     className="w-5 h-5  text-white"
                     alt=""
-                    src="/images/icons8-close-50.png"
+                    src="/images/icons8-forward-50.png"
                   />
                 </div>
               </div>
@@ -252,7 +266,10 @@ export default function ServiceDetails() {
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pt-10 pb-[100px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section
+          id="apply"
+          className="w-full min-h-[300px] px-3 pt-10 pb-[100px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative"
+        >
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -272,12 +289,7 @@ export default function ServiceDetails() {
             application form.
           </p>
 
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            className="w-full md:w-[70%] min-h-[600px] bg-gray-200 rounded-sm border border-purple-200 mt-5 p-4 md:p-5"
-          ></div>
+          <ApplyForm />
         </section>
       </main>
 

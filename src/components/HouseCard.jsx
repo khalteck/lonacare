@@ -32,10 +32,10 @@ const HouseCard = ({ item }) => {
         <p className="text-[#4a044e]">Location: {item?.location}</p>
         {item?.tags?.map((itm, idx) => {
           return (
-            <p key={idx} className="flex gap-2 items-center">
+            <div key={idx} className="flex gap-2 items-center">
               <div className="w-2 h-2 p-1 bg-[#86198f] rounded-full mt-1"></div>{" "}
               {itm}
-            </p>
+            </div>
           );
         })}
         <button

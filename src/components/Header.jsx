@@ -88,7 +88,7 @@ const Header = () => {
       <ul className="gap-10 text-[1.15rem] items-center hidden md:flex">
         <li
           onClick={() => navigate("/")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/" ? "border-[#d946ef]" : "border-transparent"
           }`}
         >
@@ -96,7 +96,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/about")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/about" ? "border-[#d946ef]" : "border-transparent"
           }`}
         >
@@ -104,7 +104,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/service")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/service"
               ? "border-[#d946ef]"
               : "border-transparent"
@@ -114,7 +114,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/contact")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/contact"
               ? "border-[#d946ef]"
               : "border-transparent"
