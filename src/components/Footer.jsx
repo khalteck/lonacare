@@ -5,20 +5,24 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="w-full bg-[#f8fafc] pt-[50px] text-[.95rem] text-slate-500">
+    <footer className="w-full bg-white pt-[50px] text-[.95rem] text-slate-500">
       <div className="w-full mb-[60px] px-4 sm:px-[30px] lg:px-[80px] flex flex-col md:flex-row gap-8 justify-center">
-        <ul className="w-[fit-content] md:w-[250px]">
+        <ul className="w-[fit-content] md:w-[280px]">
           <li className="mb-4">
             <img
               alt=""
               src="/images/logo.jpg"
-              className="w-[150px] h-[120px]"
+              className="w-[120px] h-[100px]"
             />
           </li>
-          <li className="">
-            Everyday support for elderly We pursue close relationships with
-            residential homes and care facilities to provide temporary and full
-            time care workers.
+          <li className="text-[.8rem]">
+            We make sure all our young people are registered with GP, dentist,
+            Opticians, colleges, gym, help with oyster card.
+            <br />
+            <br />
+            We have a 1 to 1 services and 2 to 1<br />
+            <br />
+            Our qualified staffs can deal with more special cases of the above.
           </li>
         </ul>
 
@@ -32,9 +36,9 @@ const Footer = () => {
           </li>
           <li className="w-1/2 md:w-[70%] grid grid-cols-2 gap-2">
             <img alt="" src="/images/right-1.jpg" className="w-full h-auto" />
-            <img alt="" src="/images/right-2.png" className="w-full h-auto" />
-            <img alt="" src="/images/right-3.png" className="w-full h-auto" />
-            <img alt="" src="/images/right-4.png" className="w-full h-auto" />
+            <img alt="" src="/images/police.webp" className="w-full h-auto" />
+            {/* <img alt="" src="/images/right-3.png" className="w-full h-auto" />
+            <img alt="" src="/images/right-4.png" className="w-full h-auto" /> */}
           </li>
         </ul>
 
@@ -87,11 +91,11 @@ const Footer = () => {
             15 Maswell Park Road,
             <br /> Hounslow, Middlesex, TW32DL
           </li>
-          <li className="w-1/2 md:w-[70%] grid grid-cols-2 gap-2">
+          <li className="w-1/2 md:w-full grid grid-cols-2 gap-2">
             <img alt="" src="/images/right-1.jpg" className="w-full h-auto" />
-            <img alt="" src="/images/right-2.png" className="w-full h-auto" />
-            <img alt="" src="/images/right-3.png" className="w-full h-auto" />
-            <img alt="" src="/images/right-4.png" className="w-full h-auto" />
+            <img alt="" src="/images/police.webp" className="w-full h-auto" />
+            {/* <img alt="" src="/images/right-3.png" className="w-full h-auto" />
+            <img alt="" src="/images/right-4.png" className="w-full h-auto" /> */}
           </li>
         </ul>
       </div>

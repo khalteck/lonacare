@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 
 const Header = () => {
-  const { currentPage, setSearchOpen } = useAppContext();
+  const { currentPage } = useAppContext();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollBackground, setScrollBackground] = useState(false);
@@ -37,7 +37,7 @@ const Header = () => {
           : !scrollBackground
           ? "bg-transparent text-white md:h-[100px]"
           : "bg-white text-black md:h-[80px]"
-      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[350px] items-center transition-all duration-700 fixed top-0 left-0 z-[999]`}
+      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[15%] items-center transition-all duration-700 fixed top-0 left-0 z-[999]`}
     >
       <Link to="/">
         {scrollBackground ? (
@@ -85,10 +85,10 @@ const Header = () => {
           } rounded-lg`}
         ></div>{" "}
       </div>
-      <ul className="gap-6 text-[.9remrem] items-center hidden md:flex">
+      <ul className="gap-6 text-[1.1rem] items-center hidden md:flex font-kalam uppercase">
         <li
           onClick={() => navigate("/")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/" ? "border-[#d946ef]" : "border-transparent"
           }`}
         >
@@ -96,7 +96,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/about")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/about" ? "border-[#d946ef]" : "border-transparent"
           }`}
         >
@@ -104,7 +104,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/service")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 whitespace-nowrap lg:pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 whitespace-nowrap lg:pb-3 border-b-4 ${
             currentPage === "/service"
               ? "border-[#d946ef]"
               : "border-transparent"
@@ -114,7 +114,7 @@ const Header = () => {
         </li>
         <li
           onClick={() => navigate("/contact")}
-          className={`cursor-pointer hover:text-purple-400 transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
+          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
             currentPage === "/contact"
               ? "border-[#d946ef]"
               : "border-transparent"
@@ -122,7 +122,7 @@ const Header = () => {
         >
           Contact
         </li>
-        <li
+        {/* <li
           onClick={() => setSearchOpen(true)}
           className={`cursor-pointer hover:bg-[#d946ef] translate-y-[-5px] transition-all duration-300 pb-1.5 whitespace-nowrap md:py-1.5 md:px-2 rounded-sm border-b-4 flex items-center gap-1 bg-[#86198f] text-white ${
             currentPage === "/earch" ? "border-[#d946ef]" : "border-transparent"
@@ -138,7 +138,7 @@ const Header = () => {
                 : "/images/icons8-search-50-white.png"
             }`}
           />
-        </li>
+        </li> */}
       </ul>
 
       {/* mobile dropdown */}

@@ -20,7 +20,7 @@ const HouseCard = ({ item }) => {
           alt=""
           src={item?.image}
           onClick={() => navigate(`/service/${item?.title}`)}
-          className="w-full h-[230px] md:h-[280px] object-cover rounded-sm hover:opacity-[0.8] cursor-pointer transition-all duration-300"
+          className="w-full h-[230px] md:h-[300px] object-cover rounded-sm hover:opacity-[0.8] cursor-pointer transition-all duration-300"
         />
         <div className="h-[40px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 w-fit flex items-center gap-2 absolute bottom-4 left-4">
           <img alt="" src="/images/icons8-home-64.png" className="w-5 h-5" />
@@ -29,7 +29,7 @@ const HouseCard = ({ item }) => {
       </div>
       <div className="flex flex-col gap-3">
         <p className="text-[#4a044e] font-bold text-[1.5rem]">{item?.title}</p>
-        <p className="text-[#4a044e]">Location: {item?.location}</p>
+        {/* <p className="text-[#4a044e]">Location: {item?.location}</p> */}
         {item?.tags?.map((itm, idx) => {
           return (
             <div key={idx} className="flex gap-2 items-center">

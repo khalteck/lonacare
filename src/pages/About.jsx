@@ -15,10 +15,14 @@ export default function About() {
     <>
       <Header />
       <main className="bg-white text-[#4a044e]">
-        <section className="w-full h-[300px] md:h-[400px] bg-about bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[350px] lg:py-[150px]">
+        <section className="w-full h-[300px] md:h-[400px] bg-hero2 bg-cover bg-center relative z-0">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
-              <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]">
+              <h1
+                data-aos="zoom-out"
+                data-aos-duration="1000"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+              >
                 About Lonacare
               </h1>
             </div>
@@ -28,7 +32,7 @@ export default function About() {
           About Lonacare
         </h1> */}
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <div className="mt-3 text-[1.25rem]">
@@ -74,7 +78,7 @@ export default function About() {
                 >
                   We are aware of the increasing demands of young people needing
                   placements and we believe our involvement and contribution to
-                  provide a much-needed service will make a huhe positive
+                  provide a much-needed service will make a huge positive
                   difference to the social care teams.
                 </p>
               </div>
@@ -86,25 +90,14 @@ export default function About() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/hero4.jpg"
+                src="/images/about.jpeg"
                 className="w-[90%] h-auto rounded-sm"
               />
             </div>
           </div>
-
-          {/* <img
-            alt=""
-            src="/images/shape5.png"
-            className="w-[150px] top-5 right-5 h-auto absolute opacity-50 md:opacity-1"
-          />
-          <img
-            alt=""
-            src="/images/shape1.png"
-            className="w-[200px] bottom-7 md:bottom-5 left-[150px] h-auto absolute opacity-30 md:opacity-50"
-          /> */}
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <h1
@@ -261,8 +254,8 @@ export default function About() {
         </section>
 
         <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white bg-[#f8fafc]">
-          <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[350px]">
-            <h2 className="text-[2rem] font-medium text-center mb-8">
+          <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[15%]">
+            <h2 className="text-[2rem] font-bold text-center mb-8 font-kalam uppercase">
               Lona Care Positive Outcomes
             </h2>
             <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">

@@ -50,13 +50,17 @@ export default function ServiceDetails() {
       <main className="bg-white text-[#4a044e]">
         <section className="w-full h-[400px] md:h-[400px] bg-service bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 flex md:flex-row flex-col">
-            <div className="w-full md:w-1/2 h-fit md:h-full bg-purple-950 px-3 pt-20 pb-[50px] md:py-[100px] lg:pl-[350px] lg:py-[150px] relative">
-              <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]">
+            <div className="w-full md:w-1/2 h-fit md:h-full bg-purple-950 px-3 pt-20 pb-[50px] md:py-[100px] lg:pl-[15%] lg:py-[150px] relative">
+              <h1
+                data-aos="zoom-out"
+                data-aos-duration="1000"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+              >
                 {currentService.title}
               </h1>
-              <p className="text-white text-[1.2rem]">
+              {/* <p className="text-white text-[1.2rem]">
                 Location: {currentService?.location}
-              </p>
+              </p> */}
               <button
                 onClick={() => {
                   const element = document.getElementById("apply");
@@ -105,22 +109,22 @@ export default function ServiceDetails() {
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pt-10 lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[200px] px-3 pt-10 lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4 font-kalam"
           >
             About
           </h2>
-          <p
+          {/* <p
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
             className="w-full md:w-[70%]"
           >
             {currentService?.description}
-          </p>
+          </p> */}
           <ul
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -138,11 +142,11 @@ export default function ServiceDetails() {
           </ul>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 py-12 lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 py-12 lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4 font-kalam"
           >
             Accommodation
           </h2>
@@ -152,7 +156,7 @@ export default function ServiceDetails() {
             data-aos-delay="200"
             className="flex gap-4 flex-col md:flex-row flex-wrap"
           >
-            <div className="min-h-[100px] w-full sm:w-[300px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 flex items-start gap-2">
+            {/* <div className="min-h-[100px] w-full sm:w-[300px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 flex items-start gap-2">
               <img
                 alt=""
                 src="/images/icons8-home-64.png"
@@ -164,7 +168,7 @@ export default function ServiceDetails() {
                 </p>
                 <p>{currentService?.location}</p>
               </div>
-            </div>
+            </div> */}
 
             <div
               data-aos="fade-up"
@@ -268,7 +272,7 @@ export default function ServiceDetails() {
 
         <section
           id="apply"
-          className="w-full min-h-[300px] px-3 pt-10 pb-[100px] lg:px-[350px] bg-[#fdf4ff] z-[99] overflow-hidden relative"
+          className="w-full min-h-[300px] px-3 pt-10 pb-[100px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative"
         >
           <h2
             data-aos="fade-up"

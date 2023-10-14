@@ -11,10 +11,13 @@ export default {
     },
     fontFamily: {
       merri: ["Merriweather", "sans-serif"],
+      mont: ["Montserrat", "sans-serif"],
+      kalam: ["Kalam", "cursive"],
     },
     extend: {
       backgroundImage: {
         hero: "url('/images/hero4.jpg')",
+        hero2: "url('/images/about2.jpg')",
         about: "url('/images/service6.jpeg')",
         contact: "url('/images/contact.jpg')",
         service: "url('/images/house.jpg')",
