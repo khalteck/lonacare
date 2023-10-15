@@ -42,7 +42,7 @@ const Header = () => {
       <Link to="/">
         {scrollBackground ? (
           <h1 className="text-[1.5rem] font-merri md:text-[2rem] font-[900] text-[#86198f] uppercase">
-            Lonacare
+            Lona Care
           </h1>
         ) : (
           <>
@@ -50,7 +50,7 @@ const Header = () => {
             <h1
               className={`text-[1.5rem] font-merri md:text-[2rem] font-[900] text-white md:hidden uppercase`}
             >
-              Lonacare
+              Lona Care
             </h1>
             <div className="md:flex gap-2 items-center hidden">
               <img

@@ -82,7 +82,7 @@ export default function Homepage() {
         </section>
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[15%] bg-white overflow-hidden relative lg:top-[-50px]">
-          <div className="w-full flex gap-10">
+          <div className="w-full flex gap-10 lg:flex-row flex-col">
             <div className="w-full">
               <h1
                 data-aos="fade-up"
@@ -99,7 +99,7 @@ export default function Homepage() {
                   className=""
                 >
                   <span className="text-[#d946ef]">Lona care</span> is committed
-                  to make a difference...
+                  to make a difference.
                 </p>
                 <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
                   <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
@@ -127,7 +127,7 @@ export default function Homepage() {
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  to all our, young persons, heir families and our staff to
+                  to all our young persons, their families and our staff to
                   offer specialized care and support.
                 </p>
                 <p
@@ -165,7 +165,7 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-fit hidden relative md:flex justify-center items-center">
+            <div className="w-full sm:mx-auto sm:w-[80%] lg:w-full h-fit hidden relative md:flex justify-center items-center">
               <div className="w-full h-full absolute border-4 border-[#4a044e] translate-x-[20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
               <img
                 data-aos="zoom-in"
@@ -309,21 +309,14 @@ export default function Homepage() {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
-                  className=""
-                >
-                  <span className="text-[#d946ef]">Lona care</span> is a
-                  semi-independent living services provider...
-                </p>
-                <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
                   className="mt-3"
                 >
-                  with excellent accomodation and support within a secure,
-                  environment. We believe in a supportive environment to our
-                  residents aged 16 - 25 years where they can feel safe and kept
-                  safe.
+                  {" "}
+                  <span className="text-[#d946ef]">Lona care</span> is a
+                  semi-independent living services provider with excellent
+                  accomodation and support within a secure, environment. We
+                  believe in a supportive environment to our residents aged 16 -
+                  25 years where they can feel safe and kept safe.
                 </p>
                 <p
                   data-aos="fade-up"
@@ -376,15 +369,15 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
-              <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+            <div className="w-full sm:mx-auto sm:w-[80%] lg:w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
+              <div className="w-full h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
               <img
                 data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
                 src="/images/hero4.jpg"
-                className="w-[90%] h-auto rounded-sm"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
@@ -399,7 +392,7 @@ export default function Homepage() {
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
                 <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
                 <div>
-                  Lonacare will ensure that you have all the information you
+                  Lona Care will ensure that you have all the information you
                   always need and is available to you.
                 </div>
               </li>

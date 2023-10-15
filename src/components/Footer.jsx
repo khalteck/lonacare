@@ -89,7 +89,7 @@ const Footer = () => {
             Lona care
             <br />
             15 Maswell Park Road,
-            <br /> Hounslow, Middlesex, TW32DL
+            <br /> Hounslow, Middlesex, TW3 2DL
           </li>
           <li className="w-1/2 md:w-full grid grid-cols-2 gap-2">
             <img alt="" src="/images/right-1.jpg" className="w-full h-auto" />
@@ -100,7 +100,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="w-full h-[80px] flex justify-center items-center border-t border-[#a359fb]/30">
-        Copyright @2023 lonacare. All rights reserved
+        Copyright @2023 lona care. All rights reserved
       </div>
     </footer>
   );

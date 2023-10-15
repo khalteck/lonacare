@@ -23,13 +23,13 @@ export default function About() {
                 data-aos-duration="1000"
                 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
               >
-                About Lonacare
+                About Lona Care
               </h1>
             </div>
           </div>
         </section>
         {/* <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
-          About Lonacare
+          About Lona Care
         </h1> */}
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
