@@ -14,7 +14,7 @@ export default function Homepage() {
   }, []);
 
   const navigate = useNavigate();
-  const { setSearchOpen, searchOpen } = useAppContext();
+  const { searchOpen } = useAppContext();
 
   return (
     <>
@@ -46,12 +46,12 @@ export default function Homepage() {
                   Get In Touch
                 </button>
               </div>
-              <button
+              {/* <button
                 onClick={() => setSearchOpen(true)}
                 className="w-fit hover:bg-[#d946ef] md:hidden bg-white text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
               >
                 Search
-              </button>
+              </button> */}
             </div>
           </div>
 
