@@ -35,7 +35,7 @@ export default function Homepage() {
               >
                 OUR MISSION
               </h1>
-              <div className="mt-3 text-[1.25rem]">
+              <div className="mt-3 text-[1rem]">
                 <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8">
                   <img
                     data-aos="zoom-in"
@@ -221,7 +221,7 @@ export default function Homepage() {
                 />
               </div>
 
-              <div className="mt-3 text-[1.25rem]">
+              <div className="mt-3 text-[1rem]">
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"

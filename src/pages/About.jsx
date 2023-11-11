@@ -36,7 +36,7 @@ export default function About() {
           <div className="w-full flex gap-10">
             <div className="w-full">
               <div className="mt-3 text-[1.25rem]">
-                <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[10px]">
+                <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8">
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1000"

@@ -40,7 +40,7 @@ export default function Carousel() {
         return (
           <SwiperSlide key={index}>
             <section
-              className={`w-full h-[500px] md:h-[100vh] lg:h-[106vh] md:min-h-[500px] bg-cover bg-center relative z-0 ${
+              className={`w-full h-[500px] sm:h-[600px] md:h-[100vh] lg:h-[106vh] md:min-h-[500px] bg-cover bg-center relative z-0 ${
                 index === 0
                   ? "bg-caro2"
                   : index === 1
