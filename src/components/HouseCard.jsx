@@ -8,13 +8,13 @@ const HouseCard = ({ item }) => {
       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="200"
-      className="w-full pb-4 md:pb-5 border-b-2 border-[#86198f]/30 rounded-sm flex gap-5 md:flex-row flex-col text-black"
+      className="w-full pb-4 md:pb-5 border-b-2 border-[#912656]/30 rounded-sm flex gap-5 md:flex-row flex-col text-black"
     >
       <div
         data-aos="zoom-in"
         data-aos-duration="1000"
         data-aos-delay="200"
-        className="w-full md:w-[50%] bg-[#86198f] relative"
+        className="w-full md:w-[50%] bg-[#912656] relative"
       >
         <img
           alt=""
@@ -28,19 +28,19 @@ const HouseCard = ({ item }) => {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <p className="text-[#4a044e] font-bold text-[1.5rem]">{item?.title}</p>
+        <p className="text-[#912656] font-bold text-[1.5rem]">{item?.title}</p>
         {/* <p className="text-[#4a044e]">Location: {item?.location}</p> */}
         {item?.tags?.map((itm, idx) => {
           return (
             <div key={idx} className="flex gap-2 items-center">
-              <div className="w-2 h-2 p-1 bg-[#86198f] rounded-full mt-1"></div>{" "}
+              <div className="w-2 h-2 p-1 bg-[#912656] rounded-full mt-1"></div>{" "}
               {itm}
             </div>
           );
         })}
         <button
           onClick={() => navigate(`/service/${item?.title}`)}
-          className="w-fit bg-[#86198f] border border-[#86198f] mt-4 hover:bg-white hover:text-[#86198f] px-8 py-2 rounded-sm text-white font-medium transition-all duration-300"
+          className="w-fit bg-[#912656] border border-[#912656] mt-4 hover:bg-white hover:text-[#912656] px-8 py-2 rounded-sm text-white font-medium transition-all duration-300"
         >
           View Details
         </button>

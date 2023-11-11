@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="w-full bg-white pt-[50px] text-[.95rem] text-slate-500">
+    <footer className="w-full bg-[#1f2937] pt-[50px] text-[.95rem] text-slate-300">
       <div className="w-full mb-[60px] px-4 sm:px-[30px] lg:px-[80px] flex flex-col md:flex-row gap-8 justify-center">
         <ul className="w-[fit-content] md:w-[280px]">
           <li className="mb-4">
@@ -46,19 +46,19 @@ const Footer = () => {
           <li className="w-[fit-content] font-bold">Browse</li>
           <li
             onClick={() => navigate("/")}
-            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+            className="w-[fit-content] cursor-pointer hover:text-[#912656]"
           >
             Home
           </li>
           <li
             onClick={() => navigate("/about")}
-            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+            className="w-[fit-content] cursor-pointer hover:text-[#912656]"
           >
             About
           </li>
           <li
             onClick={() => navigate("/contact")}
-            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+            className="w-[fit-content] cursor-pointer hover:text-[#912656]"
           >
             Contact
           </li>
@@ -66,18 +66,18 @@ const Footer = () => {
 
         <ul className="w-full md:w-[250px] flex flex-col gap-3">
           <li className="w-[fit-content] font-bold">Contact Information</li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li className="w-[fit-content] cursor-pointer hover:text-[#912656]">
             <a href="tel:02080904509">Tel: 02080904509</a>
           </li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li className="w-[fit-content] cursor-pointer hover:text-[#912656]">
             <a href="tel:07956537535">Mob: 07956537535</a>
           </li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li className="w-[fit-content] cursor-pointer hover:text-[#912656]">
             <a href="mailto:info@lonacare.com">Email: info@lonacare.com</a>
           </li>
           <li
             onClick={() => navigate("/")}
-            className="w-[fit-content] cursor-pointer hover:text-purple-500"
+            className="w-[fit-content] cursor-pointer hover:text-[#912656]"
           >
             lonacare.com
           </li>
@@ -85,7 +85,7 @@ const Footer = () => {
 
         <ul className="w-full md:w-[250px] flex-col gap-3 hidden md:flex">
           <li className="w-[fit-content] font-bold">Address</li>
-          <li className="w-[fit-content] cursor-pointer hover:text-purple-500">
+          <li className="w-[fit-content] cursor-pointer hover:text-[#912656]">
             Lona care
             <br />
             15 Maswell Park Road,
@@ -99,7 +99,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="w-full h-[80px] flex justify-center items-center border-t border-[#a359fb]/30">
+      <div className="w-full h-[80px] flex justify-center items-center border-t border-white/20">
         Copyright @2023 lona care. All rights reserved
       </div>
     </footer>

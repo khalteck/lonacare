@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 import SearchCont from "../components/SearchCont";
+import Carousel from "../components/Carousel";
 
 export default function Homepage() {
   useEffect(() => {
@@ -21,65 +22,8 @@ export default function Homepage() {
       <Header />
 
       {searchOpen && <SearchCont />}
-      <main className="bg-white text-[#4a044e] font-mont">
-        <section className="w-full h-[500px] md:h-[90vh] lg:h-[105vh] md:min-h-[500px] bg-hero bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px] md:flex justify-center items-center">
-            <div
-              data-aos="zoom-out"
-              data-aos-duration="1000"
-              className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0 relative md:top-[-80px]"
-            >
-              <h1 className="text-[2rem] md:text-[3rem] md:text-center font-bold text-white leading-tight font-kalam uppercase">
-                Lona Care <br /> Making a Difference <br /> in Young Lives.
-              </h1>
-              <div className="flex gap-3 mt-4 md:mt-0 md:mx-auto">
-                <button
-                  onClick={() => navigate("/service")}
-                  className="w-fit bg-[#d946ef] hover:bg-white hover:text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
-                >
-                  Book a Service
-                </button>
-                <button
-                  onClick={() => navigate("/contact")}
-                  className="w-fit hover:bg-[#d946ef] bg-white text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
-                >
-                  Get In Touch
-                </button>
-              </div>
-              {/* <button
-                onClick={() => setSearchOpen(true)}
-                className="w-fit hover:bg-[#d946ef] md:hidden bg-white text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
-              >
-                Search
-              </button> */}
-            </div>
-          </div>
-
-          <svg
-            className="w-full absolute bottom-[-1px] left-0 z-0 hidden md:block"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#ffffff"
-              fillOpacity="1"
-              d="M0,160L120,181.3C240,203,480,245,720,240C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-            ></path>
-          </svg>
-
-          {/* mobile wave */}
-          <svg
-            className="w-full absolute bottom-[-1px] left-0 z-0 block md:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#ffffff"
-              fillOpacity="1"
-              d="M0,160L120,181.3C240,203,480,245,720,240C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-            ></path>
-          </svg>
-        </section>
+      <main className="bg-white font-mont">
+        <Carousel />
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[15%] bg-white overflow-hidden relative lg:top-[-50px]">
           <div className="w-full flex gap-10 lg:flex-row flex-col">
@@ -87,31 +31,29 @@ export default function Homepage() {
               <h1
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="font-bold text-[2rem] font-kalam"
+                className="font-bold text-[2rem] text-[#912656] text-center md:text-start"
               >
                 OUR MISSION
               </h1>
               <div className="mt-3 text-[1.25rem]">
-                <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className=""
-                >
-                  <span className="text-[#d946ef]">Lona care</span> is committed
-                  to make a difference.
-                </p>
-                <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
-                  <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+                <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8">
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                     alt=""
                     src="/images/about.jpeg"
-                    className="w-[90%] h-[230px] object-cover object-top rounded-sm"
+                    className="w-full h-[230px] object-cover object-top rounded-sm"
                   />
                 </div>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                  className=""
+                >
+                  Lona Care is committed to make a difference.
+                </p>
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -140,33 +82,9 @@ export default function Homepage() {
                   are committed to exceptional and personalized support service,
                   while ensuring customer satisfaction
                 </p>
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className="mt-4 w-full flex gap-3 font-medium font-kalam uppercase"
-                >
-                  <div className="h-[40px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 w-fit flex items-center gap-2">
-                    <img
-                      alt=""
-                      src="/images/icons8-home-64.png"
-                      className="w-5 h-5"
-                    />
-                    Homely Feel
-                  </div>
-                  <div className="h-[40px] text-[.85rem] bg-gray-200 p-3 rounded-sm border border-purple-200 w-fit flex items-center gap-2">
-                    <img
-                      alt=""
-                      src="/images/icons8-experience-30.png"
-                      className="w-5 h-5"
-                    />
-                    Experienced staff
-                  </div>
-                </div>
               </div>
             </div>
-            <div className="w-full sm:mx-auto sm:w-[80%] lg:w-full h-fit hidden relative md:flex justify-center items-center">
-              <div className="w-full h-full absolute border-4 border-[#4a044e] translate-x-[20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+            <div className="w-full h-fit hidden relative md:flex justify-center items-center">
               <img
                 data-aos="zoom-in"
                 data-aos-duration="1000"
@@ -180,11 +98,11 @@ export default function Homepage() {
         </section>
 
         <section className="w-full h-[1500px] md:h-[700px] bg-hero2 bg-cover bg-center relative">
-          <div className="w-full h-full px-3 py-5 md:py-[70px] lg:px-[15%] bg-[#86198f]/80 absolute top-0 left-0 text-white">
+          <div className="w-full h-full px-3 py-5 md:py-[70px] lg:px-[15%] bg-slate-500/80 absolute top-0 left-0 text-white">
             <h2
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-[2rem] uppercase font-bold text-center mb-8 font-kalam"
+              className="text-[2rem] uppercase font-bold text-center mb-8"
             >
               Why Lona Care
             </h2>
@@ -193,9 +111,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   1
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -208,9 +126,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   2
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -223,9 +141,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   3
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -238,9 +156,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   4
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -253,9 +171,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   5
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -268,9 +186,9 @@ export default function Homepage() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-500 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full h-[200px] bg-white rounded-sm p-3 border border-[#d946ef]/10 flex flex-col gap-3 items-center justify-center transition-all duration-500 text-[#4a044e] hover:translate-y-[-10px]"
               >
-                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#86198f] rounded-full text-[2rem] font-bold text-white">
+                <div className="p-3 w-[50px] h-[50px] flex justify-center items-center bg-[#912656] rounded-full text-[2rem] font-bold text-white">
                   6
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
@@ -288,19 +206,18 @@ export default function Homepage() {
               <h1
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="font-bold text-[2rem] font-kalam"
+                className="font-bold text-[2rem] text-[#912656] text-center md:text-start"
               >
                 WHAT IS LONA CARE
               </h1>
-              <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[10px]">
-                <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+              <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8">
                 <img
                   data-aos="zoom-in"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                   alt=""
-                  src="/images/hero4.jpg"
-                  className="w-[90%] h-auto rounded-sm"
+                  src="/images/caro2.jpg"
+                  className="w-full h-auto rounded-sm"
                 />
               </div>
 
@@ -312,11 +229,11 @@ export default function Homepage() {
                   className="mt-3"
                 >
                   {" "}
-                  <span className="text-[#d946ef]">Lona care</span> is a
-                  semi-independent living services provider with excellent
-                  accomodation and support within a secure, environment. We
-                  believe in a supportive environment to our residents aged 16 -
-                  25 years where they can feel safe and kept safe.
+                  Lona care is a semi-independent living services provider with
+                  excellent accomodation and support within a secure,
+                  environment. We believe in a supportive environment to our
+                  residents aged 16 - 25 years where they can feel safe and kept
+                  safe.
                 </p>
                 <p
                   data-aos="fade-up"
@@ -356,36 +273,35 @@ export default function Homepage() {
                 >
                   <button
                     onClick={() => navigate("/about")}
-                    className="w-fit bg-[#86198f] border border-[#86198f] hover:bg-white text-[.95rem] hover:text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
+                    className="w-fit bg-[#912656] border border-[#912656] hover:bg-white text-[.95rem] hover:text-[#912656] px-5 md:px-8 py-2 md:py-3 rounded-sm text-white font-medium transition-all duration-300"
                   >
                     Read More
                   </button>
                   <button
                     onClick={() => navigate("/service")}
-                    className="w-fit hover:bg-[#86198f] border border-[#86198f] bg-white text-[.95rem] text-[#86198f] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
+                    className="w-fit hover:bg-[#912656] border border-[#912656] bg-white text-[.95rem] text-[#912656] px-5 md:px-8 py-2 md:py-3 rounded-sm hover:text-white font-medium transition-all duration-300"
                   >
                     Book a Service
                   </button>
                 </div>
               </div>
             </div>
-            <div className="w-full sm:mx-auto sm:w-[80%] lg:w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
-              <div className="w-full h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+            <div className="w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8">
               <img
                 data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/hero4.jpg"
+                src="/images/caro2.jpg"
                 className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
         </section>
 
-        <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white">
+        {/* <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white">
           <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[15%]">
-            <h2 className="text-[2rem] font-bold text-center mb-8 font-kalam uppercase">
+            <h2 className="text-[2rem] font-bold text-center mb-8 uppercase">
               Our promise to you
             </h2>
             <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
@@ -432,7 +348,7 @@ export default function Homepage() {
               </li>
             </ul>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />

@@ -21,14 +21,14 @@ export default function Service() {
       <Header />
 
       {searchOpen && <SearchCont />}
-      <main className="bg-white text-[#4a044e]">
+      <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[300px] md:h-[400px] bg-service bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-[#912656] to-[#912656]/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
               <h1
                 data-aos="zoom-out"
                 data-aos-duration="1000"
-                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]"
               >
                 Find A Service
               </h1>

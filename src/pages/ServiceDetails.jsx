@@ -47,14 +47,14 @@ export default function ServiceDetails() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#4a044e]">
+      <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[400px] md:h-[400px] bg-service bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 flex md:flex-row flex-col">
-            <div className="w-full md:w-1/2 h-fit md:h-full bg-purple-950 px-3 pt-20 pb-[50px] md:py-[100px] lg:pl-[15%] lg:py-[150px] relative">
+            <div className="w-full md:w-1/2 h-fit md:h-full bg-[#912656] px-3 pt-20 pb-[50px] md:py-[100px] lg:pl-[15%] lg:py-[150px] relative">
               <h1
                 data-aos="zoom-out"
                 data-aos-duration="1000"
-                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]"
               >
                 {currentService.title}
               </h1>
@@ -76,7 +76,7 @@ export default function ServiceDetails() {
               </button>
             </div>
             <div className="w-full md:w-1/2 h-[250px] md:h-full relative">
-              <div className="absolute w-full h-full bg-gradient-to-bl from-purple-950/40 to-purple-950/10 "></div>
+              <div className="absolute w-full h-full bg-gradient-to-bl from-[#912656]/40 to-[#912656]/10 "></div>
               <img
                 alt=""
                 src={currentService?.image}
@@ -88,7 +88,7 @@ export default function ServiceDetails() {
                 viewBox="0 0 1440 320"
               >
                 <path
-                  fill="#3b0764"
+                  fill="#912656"
                   fillOpacity="1"
                   d="M0,192L26.7,160C53.3,128,107,64,160,58.7C213.3,53,267,107,320,149.3C373.3,192,427,224,480,234.7C533.3,245,587,235,640,202.7C693.3,171,747,117,800,117.3C853.3,117,907,171,960,208C1013.3,245,1067,267,1120,245.3C1173.3,224,1227,160,1280,128C1333.3,96,1387,96,1413,96L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
                 ></path>
@@ -100,7 +100,7 @@ export default function ServiceDetails() {
                 viewBox="0 0 1440 320"
               >
                 <path
-                  fill="#3b0764"
+                  fill="#912656"
                   fillOpacity="1"
                   d="M0,192L26.7,160C53.3,128,107,64,160,58.7C213.3,53,267,107,320,149.3C373.3,192,427,224,480,234.7C533.3,245,587,235,640,202.7C693.3,171,747,117,800,117.3C853.3,117,907,171,960,208C1013.3,245,1067,267,1120,245.3C1173.3,224,1227,160,1280,128C1333.3,96,1387,96,1413,96L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
                 ></path>
@@ -113,7 +113,7 @@ export default function ServiceDetails() {
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-[1.75rem] md:text-[2rem] font-bold my-4 font-kalam"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
           >
             About
           </h2>
@@ -146,7 +146,7 @@ export default function ServiceDetails() {
           <h2
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-[1.75rem] md:text-[2rem] font-bold my-4 font-kalam"
+            className="text-[1.75rem] md:text-[2rem] font-bold my-4"
           >
             Accommodation
           </h2>

@@ -22,6 +22,20 @@
     }
   }
 
+  .scale {
+    animation: scale 3s ease-out;
+  }
+  @keyframes scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
   .rotate {
     animation: rotate 25s linear infinite;
   }
@@ -33,5 +47,9 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  .first-section-text {
+    text-shadow: 1px 1px #000000;
   }
 }

@@ -22,14 +22,14 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#4a044e]">
+      <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[300px] md:h-[400px] bg-contact bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-[#912656] to-[#912656]/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
               <h1
                 data-aos="zoom-out"
                 data-aos-duration="1000"
-                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]"
               >
                 Contact Us
               </h1>
@@ -38,12 +38,12 @@ export default function Contact() {
         </section>
 
         <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[80px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
-          <div className="w-full mt-4 flex md:flex-row flex-col flex-wrap gap-3 text-[#4a044e] z-30">
+          <div className="w-full mt-4 flex md:flex-row flex-col flex-wrap gap-3 text-[#912656] z-30">
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 transition-all duration-300  text-[#912656] hover:translate-y-[-10px]"
             >
               <img
                 alt=""
@@ -59,7 +59,7 @@ export default function Contact() {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 transition-all duration-300  text-[#912656] hover:translate-y-[-10px]"
             >
               <img
                 alt=""
@@ -81,7 +81,7 @@ export default function Contact() {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+              className="w-full md:w-[32%] min-w-[200px] bg-white/70 z-30 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col items-center gap-2 transition-all duration-300  text-[#912656] hover:translate-y-[-10px]"
             >
               <img
                 alt=""

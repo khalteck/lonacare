@@ -14,37 +14,36 @@ export default function About() {
   return (
     <>
       <Header />
-      <main className="bg-white text-[#4a044e]">
+      <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[300px] md:h-[400px] bg-hero2 bg-cover bg-center relative z-0">
-          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-purple-950 to-purple-950/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
+          <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-[#912656] to-[#912656]/10 px-3 py-[100px] lg:px-[15%] lg:py-[150px]">
             <div className="flex flex-col gap-3 mt-[50px] sm:mt-[100px] lg:mt-0">
               <h1
                 data-aos="zoom-out"
                 data-aos-duration="1000"
-                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px] font-kalam"
+                className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight uppercase md:mt-[50px]"
               >
                 About Lona Care
               </h1>
             </div>
           </div>
         </section>
-        {/* <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-[#4a044e] bg-[#fdf4ff] font-merri">
+        {/* <h1 className="text-[1.5rem] font-bold uppercase pt-10 text-center text-black bg-white font-merri">
           About Lona Care
         </h1> */}
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[15%] bg-white z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <div className="mt-3 text-[1.25rem]">
                 <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8 translate-x-[10px]">
-                  <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                     alt=""
                     src="/images/hero4.jpg"
-                    className="w-[90%] h-auto rounded-sm"
+                    className="w-full h-auto rounded-sm"
                   />
                 </div>
                 <p
@@ -83,21 +82,20 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8 translate-x-[-10px]">
-              <div className="w-[90%] h-full absolute border-4 border-[#4a044e] translate-x-[-20px] translate-y-[20px] rounded-sm bg-[#4a044e]/10"></div>
+            <div className="w-full h-fit hidden relative md:flex justify-center items-center mt-3 mb-8">
               <img
                 data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
                 src="/images/about.jpeg"
-                className="w-[90%] h-auto rounded-sm"
+                className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
         </section>
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[15%] bg-[#fdf4ff] z-[99] overflow-hidden relative">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] md:py-[70px] lg:px-[15%] bg-white z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
               <h1
@@ -176,32 +174,13 @@ export default function About() {
             </div> */}
           </div>
 
-          {/* <img
-            alt=""
-            src="/images/shape2.svg"
-            className="w-[30px] bottom-[100px] right-[100px] h-auto absolute opacity-50 md:opacity-1"
-          />
-          <img
-            alt=""
-            src="/images/shape4.svg"
-            className="w-[40px] top-7 md:bottom-5 left-[250px] h-auto absolute opacity-30 md:opacity-50"
-          /> */}
-
           <div className="w-full mt-10">
-            {/* <p
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              //   data-aos-delay="200"
-              className="font-medium text-[1.5rem] mt-4 mx-auto text-center mb-5"
-            >
-              We Care
-            </p> */}
-            <div className="w-full mt-4 flex md:flex-row flex-col gap-3 text-[#4a044e] ">
+            <div className="w-full mt-4 flex md:flex-row flex-col gap-3 text-black ">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
                 <p className="font-bold text-[1.25rem]">Education</p>
                 <p>
@@ -213,7 +192,7 @@ export default function About() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
                 <p className="font-bold text-[1.25rem]">Healty Living</p>
                 <p>
@@ -224,7 +203,7 @@ export default function About() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
                 <p className="font-bold text-[1.25rem]">
                   Encouragement & Motivation
@@ -238,7 +217,7 @@ export default function About() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="w-full bg-white/80 border border-[#dc6bdd]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 hover:bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] transition-all duration-300 hover:text-white text-[#4a044e] hover:translate-y-[-10px]"
+                className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
                 <p className="font-bold text-[1.25rem]">
                   Independence & Confidence
@@ -253,14 +232,14 @@ export default function About() {
           </div>
         </section>
 
-        <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white bg-[#f8fafc]">
-          <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[15%]">
-            <h2 className="text-[2rem] font-bold text-center mb-8 font-kalam uppercase">
+        <section className="w-full relative">
+          <div className="w-full h-fit bg-gray-300 px-3 py-[70px] lg:px-[15%]">
+            <h2 className="text-[2rem] font-bold text-center mb-8 uppercase">
               Lona Care Positive Outcomes
             </h2>
             <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
                 <div>
                   Young people at lona care are supported by specialized key
@@ -270,7 +249,7 @@ export default function About() {
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
                 <div>
                   Lona care wants to offer the YP'sa level of confidence that
@@ -280,7 +259,7 @@ export default function About() {
                 </div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
+                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
                 <div>
                   We believe that if we can achieve the goals set our YP's will

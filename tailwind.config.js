@@ -16,7 +16,9 @@ export default {
     },
     extend: {
       backgroundImage: {
-        hero: "url('/images/hero4.jpg')",
+        caro1: "url('/images/hero4.jpg')",
+        caro2: "url('/images/caro2.jpg')",
+        caro3: "url('/images/caro3.jpg')",
         hero2: "url('/images/about2.jpg')",
         about: "url('/images/service6.jpeg')",
         contact: "url('/images/contact.jpg')",

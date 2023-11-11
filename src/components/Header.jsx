@@ -13,7 +13,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const scrollThreshold = 100;
+      const scrollThreshold = 500;
 
       setScrollBackground(scrollY > scrollThreshold);
     };
@@ -33,30 +33,34 @@ const Header = () => {
     <header
       className={`w-full h-[60px] ${
         scrollBackground
-          ? "bg-white text-black shadow-md md:h-[80px]"
-          : !scrollBackground
-          ? "bg-transparent text-white md:h-[100px]"
-          : "bg-white text-black md:h-[80px]"
-      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[15%] items-center transition-all duration-700 fixed top-0 left-0 z-[999]`}
+          ? "bg-gray-100 text-black shadow-md md:h-[80px]"
+          : "bg-transparent md:bg-white text-black md:h-[130px] lg:h-[160px]"
+      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[15%] items-center transition-all duration-700 fixed top-0 left-0 z-[999] font-mont`}
     >
       <Link to="/">
         {scrollBackground ? (
-          <h1 className="text-[1.5rem] font-merri md:text-[2rem] font-[900] text-[#86198f] uppercase">
-            Lona Care
-          </h1>
+          <>
+            <div className="">
+              <img
+                alt=""
+                src="/images/logo.png"
+                className="w-[80px] md:w-[150px] md:h-auto h-[70px] mt-2 md:mt-0"
+              />
+            </div>
+          </>
         ) : (
           <>
             {" "}
             <h1
-              className={`text-[1.5rem] font-merri md:text-[2rem] font-[900] text-white md:hidden uppercase`}
+              className={`text-[1.5rem] font-merri md:text-[2rem] font-[900] text-white first-section-text md:hidden uppercase`}
             >
               Lona Care
             </h1>
             <div className="md:flex gap-2 items-center hidden">
               <img
                 alt=""
-                src="/images/logo.jpg"
-                className="w-[100px] h-auto md:w-[120px] md:h-[100px] rounded-sm md:rounded-b-lg"
+                src="/images/logo.png"
+                className="w-[100px] h-auto md:w-[120px] lg:w-[250px] md:h-[100px] lg:h-[160px]"
               />
             </div>
           </>
@@ -69,77 +73,128 @@ const Header = () => {
         <div
           className={`w-full h-1 ${
             scrollBackground
-              ? "bg-[#86198f]"
+              ? "bg-[#912656]"
               : !scrollBackground
               ? "bg-white"
-              : "bg-[#86198f]"
+              : "bg-[#912656]"
           } rounded-lg`}
         ></div>
         <div
           className={`w-full h-1 ${
             scrollBackground
-              ? "bg-[#86198f]"
+              ? "bg-[#912656]"
               : !scrollBackground
               ? "bg-white"
-              : "bg-[#86198f]"
+              : "bg-[#912656]"
           } rounded-lg`}
         ></div>{" "}
       </div>
-      <ul className="gap-6 text-[1.1rem] items-center hidden md:flex font-kalam uppercase">
-        <li
-          onClick={() => navigate("/")}
-          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
-            currentPage === "/" ? "border-[#d946ef]" : "border-transparent"
-          }`}
-        >
-          Home
-        </li>
-        <li
-          onClick={() => navigate("/about")}
-          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
-            currentPage === "/about" ? "border-[#d946ef]" : "border-transparent"
-          }`}
-        >
-          About
-        </li>
-        <li
-          onClick={() => navigate("/service")}
-          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 whitespace-nowrap lg:pb-3 border-b-4 ${
-            currentPage === "/service"
-              ? "border-[#d946ef]"
-              : "border-transparent"
-          }`}
-        >
-          Book service
-        </li>
-        <li
-          onClick={() => navigate("/contact")}
-          className={`cursor-pointer hover:text-[#d946ef] transition-all duration-300 pb-1.5 lg:pb-3 border-b-4 ${
-            currentPage === "/contact"
-              ? "border-[#d946ef]"
-              : "border-transparent"
-          }`}
-        >
-          Contact
-        </li>
-        {/* <li
-          onClick={() => setSearchOpen(true)}
-          className={`cursor-pointer hover:bg-[#d946ef] translate-y-[-5px] transition-all duration-300 pb-1.5 whitespace-nowrap md:py-1.5 md:px-2 rounded-sm border-b-4 flex items-center gap-1 bg-[#86198f] text-white ${
-            currentPage === "/earch" ? "border-[#d946ef]" : "border-transparent"
-          }`}
-        >
-          Search
-          <img
-            className="w-6 h-6  text-white"
-            alt=""
-            src={`${
-              scrollBackground
-                ? "/images/icons8-search-50.png"
-                : "/images/icons8-search-50-white.png"
+      <div className="w-full hidden md:flex flex-col">
+        {!scrollBackground && (
+          <div className="w-full h-[60px] flex gap-12 items-center border-b border-gray-400 sm:text-[.8rem] lg:text-[.9rem]">
+            <div className="flex gap-3 items-center">
+              <img
+                alt=""
+                src="/images/icons8-mail-50.png"
+                className="w-6 h-6"
+              />
+              <p>
+                <span className="font-bold text-[#912656]">Email Us</span>:{" "}
+                <a
+                  href="mailto:info@lonacare.com"
+                  className="hover:underline font-medium"
+                >
+                  info@lonacare.com
+                </a>
+              </p>
+            </div>
+            <div className="flex gap-1 items-center">
+              <img
+                alt=""
+                src="/images/icons8-phone-50.png"
+                className="w-6 h-6"
+              />
+              <p className="">
+                <span className="font-bold text-[#912656]">Call Us 24/7</span>:{" "}
+                <a
+                  href="tel:02080904509"
+                  className="hover:underline font-medium"
+                >
+                  02080904509 |{" "}
+                  <a
+                    href="tel:07956537535"
+                    className="hover:underline font-medium"
+                  >
+                    07956537535
+                  </a>
+                </a>
+              </p>
+            </div>
+          </div>
+        )}
+
+        <ul className="w-full sm:h-[80px] lg:h-[100px] gap-6 text-[1.1rem] items-center md:flex uppercase font-medium">
+          <li
+            onClick={() => navigate("/")}
+            className={`cursor-pointer hover:text-[#912656] transition-all duration-300 text-[.9rem] ${
+              currentPage === "/" ? "text-[#912656] font-bold" : "text-black"
             }`}
-          />
-        </li> */}
-      </ul>
+          >
+            Home
+          </li>
+          <li
+            onClick={() => navigate("/about")}
+            className={`cursor-pointer hover:text-[#912656] transition-all duration-300 text-[.9rem] ${
+              currentPage === "/about"
+                ? "text-[#912656] font-bold"
+                : "text-black"
+            }`}
+          >
+            About
+          </li>
+          <li
+            onClick={() => navigate("/service")}
+            className={`cursor-pointer hover:text-[#912656] transition-all duration-300 text-[.9rem] ${
+              currentPage === "/service"
+                ? "text-[#912656] font-bold"
+                : "text-black"
+            }`}
+          >
+            Book service
+          </li>
+          <li
+            onClick={() => navigate("/contact")}
+            className={`cursor-pointer hover:text-[#912656] transition-all duration-300 text-[.9rem] ${
+              currentPage === "/contact"
+                ? "text-[#912656] font-bold"
+                : "text-black"
+            }`}
+          >
+            Contact
+          </li>
+
+          {scrollBackground && (
+            <li className="gap-4 items-center ml-auto flex">
+              <a href="mailto:info@lonacare.com">
+                {" "}
+                <img
+                  alt=""
+                  src="/images/icons8-mail-50.png"
+                  className="w-6 h-6"
+                />
+              </a>
+              <a href="tel:02080904509">
+                {" "}
+                <img
+                  alt=""
+                  src="/images/icons8-phone-50.png"
+                  className="w-6 h-6"
+                />
+              </a>{" "}
+            </li>
+          )}
+        </ul>
+      </div>
 
       {/* mobile dropdown */}
       {openMenu && (
@@ -156,7 +211,7 @@ const Header = () => {
               src="/images/icons8-close-50.png"
             />
           </div>
-          <ul className="slide float-right w-full min-h-[150px] bg-[#4a044e] py-10 text-white gap-3 items-center md:hidden flex flex-col">
+          <ul className="slide float-right w-full min-h-[150px] bg-[#912656] py-10 text-white gap-3 items-center md:hidden flex flex-col">
             <li
               onClick={() => {
                 handleClick();
