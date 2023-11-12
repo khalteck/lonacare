@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader";
+import { useAppContext } from "./contexts/AppContext";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const About = lazy(() => import("./pages/About"));
@@ -10,7 +11,11 @@ const Service = lazy(() => import("./pages/Service"));
 const ServiceDetails = lazy(() => import("./pages/ServiceDetails"));
 // const Construction = lazy(() => import("./pages/Construction"));
 
+const AdminLogin = lazy(() => import("./admin/AdminLogin"));
+const AdminHome = lazy(() => import("./admin/AdminHome"));
+
 function App() {
+  const { currentUser } = useAppContext();
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
@@ -19,6 +24,13 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/service/:title" element={<ServiceDetails />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Admin routes */}
+        <Route
+          path="/admin"
+          element={currentUser ? <AdminHome /> : <AdminLogin />}
+        />
+        {/* <Route path="/admin-dashboard" element={<AdminHome />} /> */}
       </Routes>
     </Suspense>
   );
