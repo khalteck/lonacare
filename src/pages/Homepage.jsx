@@ -25,7 +25,7 @@ export default function Homepage() {
       <main className="bg-white font-mont">
         <Carousel />
 
-        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[15%] bg-white overflow-hidden relative lg:top-[-50px]">
+        <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[100px] lg:px-[15%] bg-white overflow-hidden relative lg:top-[-50px] text-[1.1rem]">
           <div className="w-full flex gap-10 lg:flex-row flex-col">
             <div className="w-full">
               <h1
@@ -251,7 +251,7 @@ export default function Homepage() {
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  We want to be the stepping stones to their independenceand
+                  We want to be the stepping stones to their independence and
                   adulthood.
                 </p>
                 <p

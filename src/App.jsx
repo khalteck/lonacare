@@ -12,7 +12,7 @@ const ServiceDetails = lazy(() => import("./pages/ServiceDetails"));
 // const Construction = lazy(() => import("./pages/Construction"));
 
 const AdminLogin = lazy(() => import("./admin/AdminLogin"));
-const AdminHome = lazy(() => import("./admin/AdminHome"));
+const AdminDashboard = lazy(() => import("./admin/AdminDashboard"));
 
 function App() {
   const { currentUser } = useAppContext();
@@ -28,7 +28,7 @@ function App() {
         {/* Admin routes */}
         <Route
           path="/admin"
-          element={currentUser ? <AdminHome /> : <AdminLogin />}
+          element={currentUser ? <AdminDashboard /> : <AdminLogin />}
         />
         {/* <Route path="/admin-dashboard" element={<AdminHome />} /> */}
       </Routes>
