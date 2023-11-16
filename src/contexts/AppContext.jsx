@@ -6,7 +6,7 @@ import {
 import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase/firebase-config";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, updateDoc } from "firebase/firestore";
 
 export const AppContext = createContext();
 
@@ -117,6 +117,57 @@ const AppContextProvider = ({ children }) => {
 
   const [adminCurrent, setAdminCurrent] = useState("home");
 
+  //============================================================================================ADMIN CONTENT MANAGEMENT
+  //============================================================================================ADMIN CONTENT MANAGEMENT
+  //============================================================================================ADMIN CONTENT MANAGEMENT
+
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  async function saveContactInfo(data) {
+    try {
+      setSaving(true);
+      const dataObj = {
+        email: data?.email,
+        phone1: data?.phone1,
+        phone2: data?.phone2,
+      };
+      const docRef = doc(db, "cms", "homepage");
+      await updateDoc(docRef, { contact_info: dataObj });
+      setSaved(true);
+      setTimeout(() => {
+        setSaved(false);
+      }, 3000);
+    } catch (error) {
+      console.log("Save error:", error);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function saveWhyLonacare(data) {
+    try {
+      setSaving(true);
+      const dataObj = {
+        grid_1: data?.grid_1,
+        grid_2: data?.grid_2,
+        grid_3: data?.grid_3,
+        grid_4: data?.grid_4,
+        grid_5: data?.grid_5,
+        grid_6: data?.grid_6,
+      };
+      const docRef = doc(db, "cms", "homepage");
+      await updateDoc(docRef, { why_lona_care: dataObj });
+      setSaved(true);
+      setTimeout(() => {
+        setSaved(false);
+      }, 3000);
+    } catch (error) {
+      console.log("Save error:", error);
+    } finally {
+      setSaving(false);
+    }
+  }
   return (
     <AppContext.Provider
       value={{
@@ -136,6 +187,10 @@ const AppContextProvider = ({ children }) => {
         currentUser,
         setAdminCurrent,
         adminCurrent,
+        saving,
+        saveContactInfo,
+        saved,
+        saveWhyLonacare,
       }}
     >
       {children}

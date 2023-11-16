@@ -30,7 +30,6 @@ function App() {
           path="/admin"
           element={currentUser ? <AdminDashboard /> : <AdminLogin />}
         />
-        {/* <Route path="/admin-dashboard" element={<AdminHome />} /> */}
       </Routes>
     </Suspense>
   );
