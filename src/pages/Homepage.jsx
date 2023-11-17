@@ -7,7 +7,10 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 import SearchCont from "../components/SearchCont";
+import Loader from "../components/Loader";
 import Carousel from "../components/Carousel";
+import { useQueryDoc } from "../utils/useQueryDoc";
+import { useStorageFiles } from "../utils/useStorageFiles";
 
 export default function Homepage() {
   useEffect(() => {
@@ -17,11 +20,20 @@ export default function Homepage() {
   const navigate = useNavigate();
   const { searchOpen } = useAppContext();
 
+  const { status, data } = useQueryDoc("homepage");
+
+  const { files, loading } = useStorageFiles("images/");
+
+  const ourMissionImg = files?.filter((x) => x?.includes("our_mission"))[0];
+  const whatIsImg = files?.filter((x) => x?.includes("what_is"))[0];
+
   return (
     <>
       <Header />
 
       {searchOpen && <SearchCont />}
+      {(status === "loading" || loading) && <Loader />}
+
       <main className="bg-white font-mont">
         <Carousel />
 
@@ -42,7 +54,7 @@ export default function Homepage() {
                     data-aos-duration="1000"
                     data-aos-delay="200"
                     alt=""
-                    src="/images/about.jpeg"
+                    src={ourMissionImg}
                     className="w-full h-[230px] object-cover object-top rounded-sm"
                   />
                 </div>
@@ -52,35 +64,16 @@ export default function Homepage() {
                   data-aos-delay="200"
                   className=""
                 >
-                  Lona Care is committed to make a difference.
-                </p>
-                <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className="mt-3"
-                >
-                  By working with respect, compassion, embracing independence,
-                  choice, privacy, pride and dignity,
+                  {data?.our_mission?.mission_1}
                 </p>
 
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
-                >
-                  to all our young persons, their families and our staff to
-                  offer specialized care and support.
-                </p>
-                <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
                   className="mt-3"
                 >
-                  Our vision is to provide excellent quality of service which
-                  are committed to exceptional and personalized support service,
-                  while ensuring customer satisfaction
+                  {data?.our_mission?.mission_2}
                 </p>
               </div>
             </div>
@@ -90,7 +83,7 @@ export default function Homepage() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/about.jpeg"
+                src={ourMissionImg}
                 className="w-full h-[400px] object-cover rounded-sm"
               />
             </div>
@@ -117,8 +110,7 @@ export default function Homepage() {
                   1
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  Semi Independent Living for
-                  <br /> 16 - 25 yeas of age
+                  {data?.why_lona_care?.grid_1}
                 </p>
               </div>
 
@@ -132,8 +124,7 @@ export default function Homepage() {
                   2
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  24/7 Provision for 16 - 18
-                  <br /> Years of age
+                  {data?.why_lona_care?.grid_2}
                 </p>
               </div>
 
@@ -147,8 +138,7 @@ export default function Homepage() {
                   3
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  Stepdown provision for care leavers
-                  <br /> 18 - 25 years of age
+                  {data?.why_lona_care?.grid_3}
                 </p>
               </div>
 
@@ -162,8 +152,7 @@ export default function Homepage() {
                   4
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  Experience staff to manage
-                  <br /> the service
+                  {data?.why_lona_care?.grid_4}
                 </p>
               </div>
 
@@ -177,8 +166,7 @@ export default function Homepage() {
                   5
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  Work with young persons to
-                  <br /> achieve outcomes
+                  {data?.why_lona_care?.grid_5}
                 </p>
               </div>
 
@@ -192,8 +180,7 @@ export default function Homepage() {
                   6
                 </div>
                 <p className="text-[1.15rem] text-center font-medium">
-                  Offer a homely feel
-                  <br /> provision
+                  {data?.why_lona_care?.grid_6}
                 </p>
               </div>
             </div>
@@ -216,34 +203,26 @@ export default function Homepage() {
                   data-aos-duration="1000"
                   data-aos-delay="200"
                   alt=""
-                  src="/images/caro2.jpg"
+                  src={whatIsImg}
                   className="w-full h-auto rounded-sm"
                 />
               </div>
 
-              <div className="mt-3 text-[1rem]">
+              <div className="mt-3 text-[1rem] flex flex-col gap-3">
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  {" "}
-                  Lona care is a semi-independent living services provider with
-                  excellent accomodation and support within a secure,
-                  environment. We believe in a supportive environment to our
-                  residents aged 16 - 25 years where they can feel safe and kept
-                  safe.
+                  {data?.what_is?.what_is_content_1}
                 </p>
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  We aim to be an organisation that takes great pride to support
-                  and inspire, young people so they can achieve their own
-                  personal goals, live independently and integrate within
-                  society.
+                  {data?.what_is?.what_is_content_2}
                 </p>
                 <p
                   data-aos="fade-up"
@@ -251,20 +230,9 @@ export default function Homepage() {
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  We want to be the stepping stones to their independence and
-                  adulthood.
+                  {data?.what_is?.what_is_content_3}
                 </p>
-                <p
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className="mt-3"
-                >
-                  We want to ensure that we approach the young people with
-                  respect when supporting them by engaging and developing the
-                  young person mentally, emotionally, physically and
-                  spiritually.
-                </p>
+
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -292,63 +260,12 @@ export default function Homepage() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/caro2.jpg"
+                src={whatIsImg}
                 className="w-full h-auto rounded-sm"
               />
             </div>
           </div>
         </section>
-
-        {/* <section className="w-full h-[600px] mb-[100px] md:mb-0 bg-cover bg-center relative text-white">
-          <div className="absolute w-full h-fit bg-gradient-to-r from-[#a359fb] to-[#dc6bdd] px-3 py-[70px] lg:px-[15%]">
-            <h2 className="text-[2rem] font-bold text-center mb-8 uppercase">
-              Our promise to you
-            </h2>
-            <ul className="w-full md:w-[700px] flex flex-col mx-auto text-[1.15rem]">
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div>
-                  Lona Care will ensure that you have all the information you
-                  always need and is available to you.
-                </div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div> To respect your privacy and dignity.</div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div>
-                  {" "}
-                  To understand your thoughts and support you as required.
-                </div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div> Your home is safe for you.</div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div> Address your concerns and complaints!</div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div>
-                  {" "}
-                  To keep the property well maintained and fix any repair ASAP.
-                </div>
-              </li>
-              <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
-                <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-white rounded-full mt-1"></div>
-                <div>
-                  {" "}
-                  Have regular reviews and update your support plans and
-                  identify your changing needs.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section> */}
       </main>
 
       <Footer />

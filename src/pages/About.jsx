@@ -5,14 +5,25 @@ import ScrollToTop from "../ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useQueryDoc } from "../utils/useQueryDoc";
+import { useStorageFiles } from "../utils/useStorageFiles";
+import Loader from "../components/Loader";
 
 export default function About() {
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const { status, data } = useQueryDoc("aboutpage");
+
+  const { files, loading } = useStorageFiles("images/");
+
+  const aboutImg = files?.filter((x) => x?.includes("about_image"))[0];
+
   return (
     <>
+      {(status === "loading" || loading) && <Loader />}
+
       <Header />
       <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[300px] md:h-[400px] bg-hero2 bg-cover bg-center relative z-0">
@@ -35,14 +46,14 @@ export default function About() {
         <section className="w-full min-h-[300px] px-3 pb-[70px] pt-14 md:py-[70px] lg:px-[15%] bg-white z-[99] overflow-hidden relative">
           <div className="w-full flex gap-10">
             <div className="w-full">
-              <div className="mt-3 text-[1.25rem]">
+              <div className="mt-3 text-[1rem]">
                 <div className="w-full h-fit md:hidden relative flex justify-center items-center mt-3 mb-8">
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                     alt=""
-                    src="/images/hero4.jpg"
+                    src={aboutImg}
                     className="w-full h-auto rounded-sm"
                   />
                 </div>
@@ -52,11 +63,7 @@ export default function About() {
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  As we are a team of experienced managers who have been in the
-                  social care settings for over 10 years. We identified
-                  throughmarket research and personal contacts that there was a
-                  shortage of providers offering suitable placements to place
-                  young people
+                  {data?.about_content?.about_content_1}
                 </p>
 
                 <p
@@ -65,9 +72,7 @@ export default function About() {
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  Lona care wanted to play an influential part in providing such
-                  provision services to the social care settings, thaty are
-                  facing severe shortages.
+                  {data?.about_content?.about_content_2}
                 </p>
                 <p
                   data-aos="fade-up"
@@ -75,10 +80,7 @@ export default function About() {
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  We are aware of the increasing demands of young people needing
-                  placements and we believe our involvement and contribution to
-                  provide a much-needed service will make a huge positive
-                  difference to the social care teams.
+                  {data?.about_content?.about_content_3}
                 </p>
               </div>
             </div>
@@ -88,7 +90,7 @@ export default function About() {
                 data-aos-duration="1000"
                 data-aos-delay="200"
                 alt=""
-                src="/images/about.jpeg"
+                src={aboutImg}
                 className="w-full h-auto rounded-sm"
               />
             </div>
@@ -105,31 +107,14 @@ export default function About() {
               >
                 Previous Experience and Education
               </h1>
-              <div className="mt-3 text-[1.25rem]">
-                {/* <div className="w-full md:hidden my-8 flex justify-center items-center overflow-hidden">
-                  <img
-                    alt=""
-                    src="/images/about.png"
-                    className="w-full h-auto absolute rotate rounded-full"
-                  />
-                  <img
-                    data-aos="zoom-in"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                    alt=""
-                    src="/images/mission.png"
-                    className="w-[90%] h-auto rounded-xl"
-                  />
-                </div> */}
+              <div className="mt-3 text-[1rem]">
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                   className="mt-3"
                 >
-                  As a team of experienced managers, we have a variety of
-                  experience under our titles and still taking on new trainings
-                  as required.
+                  {data?.about_content?.about_exp}
                 </p>
 
                 <p
@@ -146,32 +131,14 @@ export default function About() {
                   data-aos-delay="200"
                   className="mt-3 flex flex-col gap-2"
                 >
-                  <li>
-                    - Experienced members who were involved with working with
-                    the refugee council UK
-                  </li>
-                  <li>- Ex - CQC registered managers</li>
-                  <li>- NVQ 5 level managers</li>
-                  <li>- Level 1, 2 and 3 in Adult Social Care</li>
-                  <li>- SEN trained staff</li>
+                  <li>- {data?.about_content?.team_of_1}</li>
+                  <li>- {data?.about_content?.team_of_2}</li>
+                  <li>- {data?.about_content?.team_of_3}</li>
+                  <li>- {data?.about_content?.team_of_4}</li>
+                  <li>- {data?.about_content?.team_of_5}</li>
                 </ul>
               </div>
             </div>
-            {/* <div className="w-full hidden relative md:flex justify-center items-center">
-              <img
-                alt=""
-                src="/images/about.png"
-                className="w-full h-auto rounded-xl absolute rotate"
-              />
-              <img
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-                alt=""
-                src="/images/mission.png"
-                className="w-[80%] h-auto rounded-xl"
-              />
-            </div> */}
           </div>
 
           <div className="w-full mt-10">
@@ -182,11 +149,10 @@ export default function About() {
                 data-aos-delay="200"
                 className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
-                <p className="font-bold text-[1.25rem]">Education</p>
-                <p>
-                  To ensure our YP's are gaining as much as possible to achieve
-                  their goals
+                <p className="font-bold text-[1rem]">
+                  {data?.about_content?.box_title_1}
                 </p>
+                <p>{data?.about_content?.box_content_1}</p>
               </div>
               <div
                 data-aos="fade-up"
@@ -194,10 +160,10 @@ export default function About() {
                 data-aos-delay="200"
                 className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
-                <p className="font-bold text-[1.25rem]">Healty Living</p>
-                <p>
-                  Make sure they learn to eat well and maintain their health
+                <p className="font-bold text-[1rem]">
+                  {data?.about_content?.box_title_2}
                 </p>
+                <p>{data?.about_content?.box_content_2}</p>
               </div>
               <div
                 data-aos="fade-up"
@@ -205,13 +171,11 @@ export default function About() {
                 data-aos-delay="200"
                 className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
-                <p className="font-bold text-[1.25rem]">
-                  Encouragement & Motivation
+                <p className="font-bold text-[1rem]">
+                  {data?.about_content?.box_title_3}
                 </p>
-                <p>
-                  Our staff ensure that they always offer positivity, motivation
-                  and encourage our YPs to get up and do things themselves
-                </p>
+
+                <p>{data?.about_content?.box_content_3}</p>
               </div>
               <div
                 data-aos="fade-up"
@@ -219,14 +183,11 @@ export default function About() {
                 data-aos-delay="200"
                 className="w-full bg-white/80 border border-[#912656]/30 shadow-sm rounded-lg p-3 flex flex-col gap-2 transition-all duration-300 text-black hover:translate-y-[-10px]"
               >
-                <p className="font-bold text-[1.25rem]">
-                  Independence & Confidence
+                <p className="font-bold text-[1rem]">
+                  {data?.about_content?.box_title_4}
                 </p>
-                <p>
-                  We at Lona care want to be able to see our YP's take the
-                  challenges and pass through to become self motivated and work
-                  towards their dreams and goal.
-                </p>
+
+                <p>{data?.about_content?.box_content_4}</p>
               </div>
             </div>
           </div>
@@ -241,31 +202,17 @@ export default function About() {
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
                 <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
-                <div>
-                  Young people at lona care are supported by specialized key
-                  workers, who offer great encouragement, learning and
-                  negotiating transitions to adulthood and independence in an
-                  ever changing and increasingly complex challenging world.
-                </div>
+                <div>{data?.outcomes?.outcome_1}</div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
                 <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
-                <div>
-                  Lona care wants to offer the YP'sa level of confidence that
-                  will boost their morale and be ready for the level of choice
-                  and opportunities available to them to make informed choices
-                  for themselves.
-                </div>
+                <div>{data?.outcomes?.outcome_2}</div>
               </li>
               <li className="py-3 border-b border-slate-100/50 flex gap-0 items-start leading-tight">
                 <div className="w-2 h-2 md:w-4 md:h-4 mr-3 p-1 md:p-2 bg-black rounded-full mt-1"></div>
 
-                <div>
-                  We believe that if we can achieve the goals set our YP's will
-                  transitioning into adulthood with the skills, encouragement,
-                  motivation and knowledge to lead their independent lives.
-                </div>
+                <div>{data?.outcomes?.outcome_3}</div>
               </li>
             </ul>
           </div>

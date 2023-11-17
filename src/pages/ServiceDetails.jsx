@@ -9,26 +9,32 @@ import { useEffect, useState } from "react";
 import houses from "../data/houses.json";
 import { useParams } from "react-router-dom";
 import ApplyForm from "../components/ApplyForm";
+import { useStorageFiles } from "../utils/useStorageFiles";
+import Loader from "../components/Loader";
 
 export default function ServiceDetails() {
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const { files, loading } = useStorageFiles("images/");
+
+  const serviceImages = files?.filter((x) => x?.includes("service_image"));
+
   const { title } = useParams();
 
   const currentService = houses?.filter((item) => item?.title === title)[0];
 
   const [index, setIndex] = useState(0);
-  const [image, setImage] = useState(currentService?.pictures[index]);
+  const [image, setImage] = useState(serviceImages[index]);
 
   useEffect(() => {
-    setImage(currentService?.pictures[index]);
-  }, [index]);
+    setImage(serviceImages[index]);
+  }, [index, serviceImages]);
 
   function next() {
-    const lastIndex = currentService?.pictures?.length - 1;
-    if (image === currentService?.pictures[lastIndex]) {
+    const lastIndex = serviceImages?.length - 1;
+    if (image === serviceImages[lastIndex]) {
       setIndex(0);
     } else {
       setIndex((prev) => prev + 1);
@@ -36,8 +42,8 @@ export default function ServiceDetails() {
   }
 
   function prev() {
-    const lastIndex = currentService?.pictures?.length - 1;
-    if (image === currentService?.pictures[0]) {
+    const lastIndex = serviceImages?.length - 1;
+    if (image === serviceImages[0]) {
       setIndex(lastIndex);
     } else {
       setIndex((prev) => prev - 1);
@@ -47,6 +53,9 @@ export default function ServiceDetails() {
   return (
     <>
       <Header />
+
+      {loading && <Loader />}
+
       <main className="bg-white font-mont md:pt-[100px]">
         <section className="w-full h-[400px] md:h-[400px] bg-service bg-cover bg-center relative z-0">
           <div className="w-full h-full absolute top-0 left-0 flex md:flex-row flex-col">
@@ -251,7 +260,7 @@ export default function ServiceDetails() {
               </div>
             </div>
             <div className="flex gap-4 mt-4 flex-wrap">
-              {currentService?.pictures?.map((itm, idx) => {
+              {serviceImages?.map((itm, idx) => {
                 return (
                   <img
                     key={idx}

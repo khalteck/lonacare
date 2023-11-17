@@ -9,6 +9,8 @@ import houses from "../data/houses.json";
 import HouseCard from "../components/HouseCard";
 import { useAppContext } from "../contexts/AppContext";
 import SearchCont from "../components/SearchCont";
+import { useStorageFiles } from "../utils/useStorageFiles";
+import Loader from "../components/Loader";
 
 export default function Service() {
   useEffect(() => {
@@ -16,9 +18,15 @@ export default function Service() {
   }, []);
   const { searchOpen } = useAppContext();
 
+  const { files, loading } = useStorageFiles("images/");
+
+  const serviceImg = files?.filter((x) => x?.includes("service_image_one"))[0];
+
   return (
     <>
       <Header />
+
+      {loading && <Loader />}
 
       {searchOpen && <SearchCont />}
       <main className="bg-white font-mont md:pt-[100px]">
@@ -46,7 +54,9 @@ export default function Service() {
           {/* <h2 className="font-medium my-3">Showing 1 - 5 of 20</h2> */}
           <div className="w-full flex flex-col gap-4 md:gap-7 mt-10">
             {houses?.map((item, index) => {
-              return <HouseCard key={index} item={item} />;
+              return (
+                <HouseCard key={index} item={item} serviceImg={serviceImg} />
+              );
             })}
           </div>
         </section>

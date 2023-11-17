@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
+import { useQueryDoc } from "../utils/useQueryDoc";
 
 const Header = () => {
   const { currentPage } = useAppContext();
@@ -29,13 +30,15 @@ const Header = () => {
     setOpenMenu((prevState) => !prevState);
   }
 
+  const { data } = useQueryDoc("homepage");
+
   return (
     <header
       className={`w-full h-[60px] ${
         scrollBackground
           ? "bg-gray-100 text-black shadow-md md:h-[80px]"
           : "bg-transparent md:bg-white text-black md:h-[130px] lg:h-[160px]"
-      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[15%] items-center transition-all duration-700 fixed top-0 left-0 z-[999] font-mont`}
+      } flex md:gap-20 lg:gap-[150px] justify-between px-3 lg:px-[15%] items-center transition-all duration-700 fixed top-0 left-0 z-[100] font-mont`}
     >
       <Link to="/">
         {scrollBackground ? (
@@ -101,10 +104,10 @@ const Header = () => {
               <p>
                 <span className="font-bold text-[#912656]">Email Us</span>:{" "}
                 <a
-                  href="mailto:info@lonacare.com"
+                  href={`mailto:${data?.contact_info?.email}`}
                   className="hover:underline font-medium"
                 >
-                  info@lonacare.com
+                  {data?.contact_info?.email}
                 </a>
               </p>
             </div>
@@ -117,16 +120,16 @@ const Header = () => {
               <p className="">
                 <span className="font-bold text-[#912656]">Call Us 24/7</span>:{" "}
                 <a
-                  href="tel:02080904509"
+                  href={`tel:${data?.contact_info?.phone1}`}
                   className="hover:underline font-medium"
                 >
-                  02080904509 |{" "}
-                  <a
-                    href="tel:07956537535"
-                    className="hover:underline font-medium"
-                  >
-                    07956537535
-                  </a>
+                  {data?.contact_info?.phone1} |{" "}
+                </a>
+                <a
+                  href={`tel:${data?.contact_info?.phone2}`}
+                  className="hover:underline font-medium"
+                >
+                  {data?.contact_info?.phone1}
                 </a>
               </p>
             </div>

@@ -1,4 +1,18 @@
+import { useAppContext } from "../contexts/AppContext";
+import { useStorageFiles } from "../utils/useStorageFiles";
+import ImageHandler from "./components/ImageHandler";
+
 const ServicepageAdmin = () => {
+  const { files, loading } = useStorageFiles("images/");
+
+  const {
+    saveImageToStorage,
+    savingImage,
+    savedImage,
+    imagePreview,
+    setImagePreview,
+  } = useAppContext();
+
   return (
     <div className="w-full flex flex-col gap-6">
       <p className="text-[.95rem] my-4 text-gray-500 text-center">
@@ -18,88 +32,80 @@ const ServicepageAdmin = () => {
             <div className="w-full grid grid-cols-3 gap-4">
               <div className="w-full p-3 bg-white flex flex-col items-center gap-3">
                 <p className="font-bold">Image 1</p>
-                <div>
-                  <label htmlFor="mission_img">Change image</label>
-                  <input
-                    type="file"
-                    id="mission_img"
-                    className="w-full border border-gray-300 p-3 outline-none"
-                  />
-                </div>
-                <img
-                  className="w-full h-[250px] object-cover mt-4"
-                  src="/images/service7.jpeg"
+                <ImageHandler
+                  files={files}
+                  setImagePreview={setImagePreview}
+                  saveImageToStorage={saveImageToStorage}
+                  imagePreview={imagePreview}
+                  savedImage={savedImage}
+                  savingImage={savingImage}
+                  loading={loading}
+                  parentId={"service_image_one"}
+                  imageId={"service_img_one"}
                 />
               </div>
 
               <div className="w-full p-3 bg-white flex flex-col items-center gap-3">
                 <p className="font-bold">Image 2</p>
-                <div>
-                  <label htmlFor="mission_img">Change image</label>
-                  <input
-                    type="file"
-                    id="mission_img"
-                    className="w-full border border-gray-300 p-3 outline-none"
-                  />
-                </div>
-                <img
-                  className="w-full h-[250px] object-cover mt-4"
-                  src="/images/service3.jpeg"
+                <ImageHandler
+                  files={files}
+                  setImagePreview={setImagePreview}
+                  saveImageToStorage={saveImageToStorage}
+                  imagePreview={imagePreview}
+                  savedImage={savedImage}
+                  savingImage={savingImage}
+                  loading={loading}
+                  parentId={"service_image_two"}
+                  imageId={"service_img_two"}
                 />
               </div>
 
               <div className="w-full p-3 bg-white flex flex-col items-center gap-3">
                 <p className="font-bold">Image 3</p>
-                <div>
-                  <label htmlFor="mission_img">Change image</label>
-                  <input
-                    type="file"
-                    id="mission_img"
-                    className="w-full border border-gray-300 p-3 outline-none"
-                  />
-                </div>
-                <img
-                  className="w-full h-[250px] object-cover mt-4"
-                  src="/images/service9.jpeg"
+                <ImageHandler
+                  files={files}
+                  setImagePreview={setImagePreview}
+                  saveImageToStorage={saveImageToStorage}
+                  imagePreview={imagePreview}
+                  savedImage={savedImage}
+                  savingImage={savingImage}
+                  loading={loading}
+                  parentId={"service_image_three"}
+                  imageId={"service_img_three"}
                 />
               </div>
 
               <div className="w-full p-3 bg-white flex flex-col items-center gap-3">
                 <p className="font-bold">Image 4</p>
-                <div>
-                  <label htmlFor="mission_img">Change image</label>
-                  <input
-                    type="file"
-                    id="mission_img"
-                    className="w-full border border-gray-300 p-3 outline-none"
-                  />
-                </div>
-                <img className="w-full h-[250px] object-cover mt-4" src="" />
+                <ImageHandler
+                  files={files}
+                  setImagePreview={setImagePreview}
+                  saveImageToStorage={saveImageToStorage}
+                  imagePreview={imagePreview}
+                  savedImage={savedImage}
+                  savingImage={savingImage}
+                  loading={loading}
+                  parentId={"service_image_four"}
+                  imageId={"service_img_four"}
+                />
               </div>
 
               <div className="w-full p-3 bg-white flex flex-col items-center gap-3">
                 <p className="font-bold">Image 5</p>
-                <div>
-                  <label htmlFor="mission_img">Change image</label>
-                  <input
-                    type="file"
-                    id="mission_img"
-                    className="w-full border border-gray-300 p-3 outline-none"
-                  />
-                </div>
-                <img className="w-full h-[250px] object-cover mt-4" src="" />
+                <ImageHandler
+                  files={files}
+                  setImagePreview={setImagePreview}
+                  saveImageToStorage={saveImageToStorage}
+                  imagePreview={imagePreview}
+                  savedImage={savedImage}
+                  savingImage={savingImage}
+                  loading={loading}
+                  parentId={"service_image_five"}
+                  imageId={"service_img_five"}
+                />
               </div>
             </div>
           </form>
-          <div className="flex justify-center mt-6">
-            <button
-              // disabled={loading}
-              // onClick={() => logout()}
-              className={` w-fit bg-[#912656] hover:bg-[#912656]/80 px-5 md:px-8 py-2 rounded-sm text-white font-medium transition-all duration-300`}
-            >
-              Save
-            </button>
-          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-const HouseCard = ({ item }) => {
+const HouseCard = ({ item, serviceImg }) => {
   const navigate = useNavigate();
   return (
     <div
@@ -18,7 +18,7 @@ const HouseCard = ({ item }) => {
       >
         <img
           alt=""
-          src={item?.image}
+          src={serviceImg}
           onClick={() => navigate(`/service/${item?.title}`)}
           className="w-full h-[230px] md:h-[300px] object-cover rounded-sm hover:opacity-[0.8] cursor-pointer transition-all duration-300"
         />
