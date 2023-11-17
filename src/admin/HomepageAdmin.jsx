@@ -1,4 +1,5 @@
 import { useQueryDoc } from "../utils/useQueryDoc";
+import { useStorageFiles } from "../utils/useStorageFiles";
 import ContactForm from "./components/ContactForm";
 import Sec2 from "./components/Sec2";
 import Sec3 from "./components/Sec3";
@@ -7,7 +8,7 @@ import Sec4 from "./components/Sec4";
 const HomepageAdmin = () => {
   const { status, data } = useQueryDoc("homepage");
 
-  console.log("data", data);
+  const { files, loading } = useStorageFiles("images/");
 
   return (
     <div className="w-full flex flex-col gap-6">
@@ -32,11 +33,11 @@ const HomepageAdmin = () => {
           "Loading..."
         ) : (
           <>
-            <Sec2 data={data} />
+            <Sec2 data={data} files={files} loading={loading} />
 
             <Sec3 data={data} />
 
-            <Sec4 data={data} />
+            <Sec4 data={data} files={files} loading={loading} />
           </>
         )}
       </div>

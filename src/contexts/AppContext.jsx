@@ -5,8 +5,9 @@ import {
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { auth, db } from "../firebase/firebase-config";
+import { auth, db, storage } from "../firebase/firebase-config";
 import { doc, setDoc, updateDoc } from "firebase/firestore";
+import { deleteObject, listAll, ref, uploadBytes } from "firebase/storage";
 
 export const AppContext = createContext();
 
@@ -124,16 +125,12 @@ const AppContextProvider = ({ children }) => {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  async function saveContactInfo(data) {
+  async function saveEdit(data, field, docId) {
     try {
       setSaving(true);
-      const dataObj = {
-        email: data?.email,
-        phone1: data?.phone1,
-        phone2: data?.phone2,
-      };
-      const docRef = doc(db, "cms", "homepage");
-      await updateDoc(docRef, { contact_info: dataObj });
+
+      const docRef = doc(db, "cms", docId);
+      await updateDoc(docRef, { [field]: data });
       setSaved(true);
       setTimeout(() => {
         setSaved(false);
@@ -145,29 +142,49 @@ const AppContextProvider = ({ children }) => {
     }
   }
 
-  async function saveWhyLonacare(data) {
+  const [imagePreview, setImagePreview] = useState("");
+
+  const [savingImage, setSavingImage] = useState(false);
+  const [savedImage, setSavedImage] = useState(false);
+
+  async function saveImageToStorage(file, imageId) {
     try {
-      setSaving(true);
-      const dataObj = {
-        grid_1: data?.grid_1,
-        grid_2: data?.grid_2,
-        grid_3: data?.grid_3,
-        grid_4: data?.grid_4,
-        grid_5: data?.grid_5,
-        grid_6: data?.grid_6,
-      };
-      const docRef = doc(db, "cms", "homepage");
-      await updateDoc(docRef, { why_lona_care: dataObj });
-      setSaved(true);
+      setSavingImage(true);
+
+      const imagesRef = ref(storage, "images");
+
+      // List all items in the images folder
+      const imagesList = await listAll(imagesRef);
+
+      // Iterate through the items to find the image with the matching imageId in its name
+      const deletePromises = imagesList.items
+        .filter((item) => item.name.includes(`${imageId}_`))
+        .map(async (item) => {
+          await deleteObject(item); // Delete the image if it matches the pattern
+        });
+
+      // Wait for all deletion operations to complete
+      await Promise.all(deletePromises);
+
+      // Upload the new image
+      const storageRef = ref(storage, "images/" + `${imageId}_${file.name}`);
+      await uploadBytes(storageRef, file);
+
+      setSavedImage(true);
       setTimeout(() => {
-        setSaved(false);
+        setSavedImage(false);
+        setImagePreview("");
       }, 3000);
+
+      console.log("Image uploaded successfully!");
     } catch (error) {
-      console.log("Save error:", error);
+      console.error("Error uploading image:", error);
+      throw error;
     } finally {
-      setSaving(false);
+      setSavingImage(false);
     }
   }
+
   return (
     <AppContext.Provider
       value={{
@@ -188,9 +205,13 @@ const AppContextProvider = ({ children }) => {
         setAdminCurrent,
         adminCurrent,
         saving,
-        saveContactInfo,
+        saveEdit,
         saved,
-        saveWhyLonacare,
+        saveImageToStorage,
+        savingImage,
+        savedImage,
+        setImagePreview,
+        imagePreview,
       }}
     >
       {children}

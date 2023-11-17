@@ -3,7 +3,7 @@ import { useAppContext } from "../../contexts/AppContext";
 
 /* eslint-disable react/prop-types */
 const Sec3 = ({ data }) => {
-  const { saveWhyLonacare, saving, saved } = useAppContext();
+  const { saveEdit, saving, saved } = useAppContext();
 
   const [info, setInfo] = useState({
     grid_1: data?.why_lona_care?.grid_1 || "",
@@ -25,7 +25,7 @@ const Sec3 = ({ data }) => {
   }
 
   function handleSubmit() {
-    saveWhyLonacare(info);
+    saveEdit(info, "why_lona_care", "homepage");
   }
 
   return (

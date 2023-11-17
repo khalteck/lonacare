@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="w-full bg-[#1f2937] pt-[50px] text-[.95rem] text-slate-300">
+    <footer className="w-full bg-[#1f2937] pt-[50px] text-[.95rem] text-slate-300 mb-[-30px]">
       <div className="w-full mb-[60px] px-4 sm:px-[30px] lg:px-[80px] flex flex-col md:flex-row gap-8 justify-center">
         <ul className="w-[fit-content] md:w-[280px]">
           <li className="mb-4">

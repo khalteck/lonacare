@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useAppContext } from "../../contexts/AppContext";
 
 const ContactForm = ({ data }) => {
-  const { saveContactInfo, saving, saved } = useAppContext();
+  const { saveEdit, saving, saved } = useAppContext();
 
   const [info, setInfo] = useState({
     email: data?.contact_info?.email || "",
@@ -22,7 +22,7 @@ const ContactForm = ({ data }) => {
   }
 
   function handleSubmit() {
-    saveContactInfo(info);
+    saveEdit(info, "contact_info", "homepage");
   }
 
   return (
